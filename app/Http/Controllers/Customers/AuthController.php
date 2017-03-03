@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 use App\Models\Customer;
-
+use App\Models\Industries;
 class AuthController extends Controller
 {
     /*
@@ -27,26 +27,36 @@ class AuthController extends Controller
    
     public function getRegView()
     {
-        return view('customer_submission');
+        $industries = Industries::all();
+        dd($industries);
+        return view('customer_submission',compact('industries'));
     }
     
     public function register(Request $request)
     {
         $this->validate($request,[
-            'name' => 'required',
+            'organization' => 'required',
             'email' => 'required|email|unique:customers',
-//            'phone ' => 'required',
-            'role' => 'required',
-            'textarea1' => 'required',
-            'textarea2' => 'required',
-            'branch' => 'required',
+            'expertise_area' => 'required',
+            'area_input'=>'required_if:expertise_area,other',
+            'objective' => 'required',
+            'outline_of_topic' => 'required',
+            'industry_id' => 'required|exists:industries,id',
             'desc_file' => 'required'
+        ],[
+            'industry_id.required' => 'Industry field requird.',
+            'industry_id.exists' => 'The selected industry is invalid.'
         ]);
 
-        $data = $request->except('desc_file','_token','role','branch');
-        $data['role_id'] = $request->role;
-        $data['branch_id'] = $request->branch;
+        $data = $request->except('desc_file','_token','expertise_area');
+        if($request->expertise_area == 'other' ) {
+            $data ['expertise_area'] = $request->area_input;
+        }
+        else{
+            $data ['expertise_area'] = $request->expertise_area;
+        }
 
+        
         $file = $request->desc_file;
 
         $file_name = rand(10,99) . time() . '.' .$file->getClientOriginalExtension();
@@ -58,7 +68,7 @@ class AuthController extends Controller
         $data['deleted_at'] = Carbon::now();
         
 
-//        dd($data);
+
         Customer::create($data);
         
         return view('layouts.message');

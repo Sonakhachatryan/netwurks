@@ -20,6 +20,7 @@
 
     <link href="{{ url('administration/css/animate.css' ) }} " rel="stylesheet">
     <link href="{{ url('administration/css/style.css' ) }} " rel="stylesheet">
+    <link href="{{ url('administration/css/custom.css' ) }} " rel="stylesheet">
 
 </head>
 

@@ -13,16 +13,16 @@ class AssociateController extends Controller
 
     public function index()
     {
-        $associates = Associate::withTrashed()->with(['role', 'branch'])->paginate($this->paginate);
+        $associates = Associate::withTrashed()->paginate($this->paginate);
 
-        return view('admin.associates.index', compact('associates', $associates));
+        return view('admin.associates.index', compact('associates'));
     }
 
     public function getAssociate($id)
     {
-        $associate = Associate::withTrashed()->with(['role', 'branch'])->findOrFail($id);
+        $associate = Associate::withTrashed()->findOrFail($id);
 
-        return view('admin.associates.view', compact('associate', $associate));
+        return view('admin.associates.view', compact('associate'));
     }
 
 

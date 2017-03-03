@@ -15,16 +15,11 @@ class CreateCustomersTable extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('organization');
             $table->string('email')->unique();
-            $table->string('password')->nullbale();
+            $table->string('password')->nullable();
             $table->string('phone');
-//            $table->integer('role_id')->unsigned();
-//            $table->foreign('role_id')
-//                ->references('id')
-//                ->on('roles')
-//                ->onDelete('cascade')
-//                ->onUpdate('cascade');
+            $table->string('expertise_area');
             $table->text('objective');
             $table->text('outline_of_topic');
             $table->integer('industry_id')->unsigned();

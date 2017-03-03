@@ -80,7 +80,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
 
 
         Route::get('associates', 'AssociateController@index');
-        Route::get('associates/{id}', 'AssociateController@getCustomer');
+        Route::get('associates/{id}', 'AssociateController@getAssociate');
         Route::get('associates/activate/{id}', 'AssociateController@activate');
         Route::get('associates/reject/{id}', 'AssociateController@reject');
 

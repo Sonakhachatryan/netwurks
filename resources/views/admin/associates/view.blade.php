@@ -11,6 +11,7 @@
             </a>
         @endif
     </h1>
+    <img class="show-user-image" alt="user-image" src = "{{ url('images/associates/' . $associate->avatar) }}">
     <div class="table-responsive">
         <table class="table table-bordered table-striped table-hover">
             <tbody>
@@ -27,17 +28,17 @@
                 <td> {{ $associate->phone }} </td>
             </tr>
             <tr>
-                <th> Role</th>
-                <td> {{ $associate->role->name }} </td>
+                <th> Expertise </th>
+                <td> {{ $associate->expertise_area }} </td>
             </tr>
             <tr>
-                <th> Branch</th>
-                <td> {{ $customer->branch->name }} </td>
+                <th> Linked IN </th>
+                <td> <a href ="{{  $associate->linked_in }}">{{  $associate->linked_in }}</a> </td>
             </tr>
             <tr>
                 <th> Status</th>
                 <td>
-                    @if($customer->deleted_at != NULL)
+                    @if($associate->deleted_at != NULL)
                         Not Active
                     @else
                         Active
@@ -45,18 +46,15 @@
                 </td>
             </tr>
             <tr>
-                <th> Description file</th>
-                <td><a href="{{ url('customers/download/' . $customer->id) }}">{{ $customer->desc_file }}</a></td>
+                <th> Resume </th>
+                <td><a href="{{ url('customers/download/' . $associate->id) }}">{{ $associate->resume }}</a></td>
             </tr>
             </tbody>
         </table>
     </div>
 
-    <h1>Textarea1</h1>
-    <p>{{ $customer->textarea1 }}</p>
-
-    <h1>Textarea2</h1>
-    <p>{{ $customer->textarea2 }}</p>
+    <h1>Information</h1>
+    <p>{{ $associate->information }}</p>
 
 @stop
 

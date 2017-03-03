@@ -18,14 +18,14 @@ class Customer extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name',
+        'organization',
         'email',
         'password',
         'phone',
-        'role_id',
-        'textarea1',
-        'textarea2',
-        'branch_id',
+        'expertise_area',
+        'objective',
+        'outline_of_topic',
+        'industry_id',
         'desc_file',
         'deleted_at'
     ];
