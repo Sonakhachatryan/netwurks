@@ -1,0 +1,2014 @@
+@font-face {
+  font-family: 'robotoregular';
+  src: url("../libs/fonts/roboto-regular-webfont.woff2") format("woff2"), url("../libs/fonts/roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robotobold';
+  src: url("../libs/fonts/roboto-bold-webfont.woff2") format("woff2"), url("../libs/fonts/roboto-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'robotoregular';
+  font-size: 22px;
+}
+
+header {
+  height: 102px;
+  background-color: #01293d;
+  position: relative;
+}
+
+header #first-block-content {
+  height: 100%;
+  position: relative;
+}
+
+header #first-block-content h1 {
+  float: left;
+  margin-left: 131px;
+  line-height: 102px;
+}
+
+header #first-block-content h1 a {
+  display: inline-block;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+header #first-block-content ul {
+  float: right;
+  height: 100%;
+  margin-bottom: 0 !important;
+}
+
+header #first-block-content ul li {
+  float: left;
+  margin-right: 30px;
+  height: 100%;
+}
+
+header #first-block-content ul li:last-child {
+  margin-right: 0;
+  height: 100%;
+  background-color: #fff;
+  padding-left: 40px;
+  padding-right: 45px;
+}
+
+header #first-block-content ul li:last-child a {
+  color: #002f51;
+}
+
+header #first-block-content ul li a {
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  line-height: 102px;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+header .nav-icon {
+  position: absolute;
+  right: 30px;
+  top: 40px;
+  display: none;
+  cursor: pointer;
+}
+
+.login-inner {
+  padding: 15px 50px 50px;
+  background-color: #fff;
+  width: 395px;
+  position: absolute;
+  right: 0;
+  top: 102px;
+  z-index: 99999;
+  display: none;
+}
+
+.login-inner.open-btn {
+  display: block;
+}
+
+.login-inner .times-list {
+  background: url("../img/times-icon.png") no-repeat;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+.login-inner .login-inner-list h3 {
+  color: #002f51;
+  margin-bottom: 35px;
+}
+
+.login-inner .login-inner-list form .username, .login-inner .login-inner-list form .password {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.login-inner .login-inner-list form .username:before, .login-inner .login-inner-list form .password:before {
+  width: 1px;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  height: 15px;
+  background: #01293d;
+  /* border-left: 1px solid #01293d;*/
+}
+
+.login-inner .login-inner-list form .username:after, .login-inner .login-inner-list form .password:after {
+  width: 1px;
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  height: 15px;
+  background: #01293d;
+}
+
+.login-inner .login-inner-list form .username input, .login-inner .login-inner-list form .password input {
+  width: 100%;
+  padding: 0 8px;
+  height: 40px;
+  border-bottom: 1px solid #01293d;
+}
+
+.login-inner .login-inner-list form .username input::-webkit-input-placeholder, .login-inner .login-inner-list form .password input::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #80a4b5 !important;
+  font-size: 18px;
+}
+
+.login-inner .login-inner-list form .username input:-moz-placeholder, .login-inner .login-inner-list form .password input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #80a4b5 !important;
+  font-size: 18px;
+}
+
+.login-inner .login-inner-list form .username input::-moz-placeholder, .login-inner .login-inner-list form .password input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #80a4b5 !important;
+  font-size: 18px;
+}
+
+.login-inner .login-inner-list form .username input:-ms-input-placeholder, .login-inner .login-inner-list form .password input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #80a4b5 !important;
+  font-size: 18px;
+}
+
+.login-inner .login-inner-list form .login-inner-list-bottom a {
+  font-size: 13px;
+  color: #02496c;
+  margin-top: 11px;
+  display: inline-block;
+  float: left;
+  /* margin-top: 30px;*/
+}
+
+.login-inner .login-inner-list form .login-inner-list-bottom button {
+  background-color: #01293d;
+  font-size: 20px;
+  color: #fff;
+  border: 0;
+  height: 40px;
+  width: 124px;
+  float: right !important;
+}
+
+main .slider-block .slider-left-block {
+  /*background: url("../img/slider-left-bg.png") no-repeat;*/
+  background: url("../img/bg-slider1.png");
+  background-repeat: repeat;
+  position: relative;
+  width: 678px;
+  height: 855px;
+}
+
+main .slider-block .slider-left-block .slider-left-block-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 475px;
+  height: 440px;
+}
+
+main .slider-block .slider-left-block .slider-left-block-inner p {
+  margin-bottom: 68px;
+  color: #01293d;
+  font-size: 60px;
+  line-height: 80px;
+}
+
+main .slider-block .slider-left-block .slider-left-block-inner button {
+  background: url("../img/slider-btn.png") no-repeat;
+  width: 242px;
+  height: 82px;
+  border: 0;
+  color: #002f51;
+}
+
+main .slider-block .slider-right-block {
+  position: relative;
+  background: url("../img/pic1.png") no-repeat;
+  width: 1225px;
+  height: 855px;
+  background-size: cover;
+}
+
+main .slider-block .slider-right-block .slider-right-block-inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("../img/slider-bg.png") no-repeat;
+  width: 131px;
+  height: 855px;
+}
+
+main .carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  z-index: 15;
+  width: 5%;
+  padding-left: 25px;
+  margin-left: -30%;
+  text-align: center;
+  list-style: none;
+  right: 0;
+  left: auto;
+}
+
+main .carousel-indicators li {
+  display: block;
+  margin: 8px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #c8c4c3;
+}
+
+main .carousel-indicators li.active {
+  margin: 8px;
+  background-color: #c8c4c3;
+}
+
+main #content-top {
+  padding-top: 130px;
+  padding-bottom: 145px;
+}
+
+main #content-top .content-top-left-list h2 {
+  margin-bottom: 85px;
+  text-align: center;
+  font-size: 20px;
+  color: #999;
+  position: relative;
+  display: inline-block;
+}
+
+main #content-top .content-top-left-list h2:before {
+  width: 85px;
+  border-top: 3px solid #002f51;
+  content: "";
+  position: absolute;
+  left: 45px;
+}
+
+main #content-top .content-top-left-list h2 .title {
+  color: #002f51;
+  font-size: 36px;
+  margin-left: 24px;
+}
+
+main #content-top .content-top-left-list p {
+  text-align: center;
+  color: #7f7f7f;
+  line-height: 28px;
+  width: 390px;
+  margin-bottom: 45px;
+}
+
+main #content-top .content-top-right-list .content-top-right-list-inner {
+  background: url(../img/pic2.png) no-repeat top center;
+  width: 100%;
+  height: 445px;
+  position: relative;
+  background-size: cover;
+}
+
+main #content-top .content-top-right-list .content-top-right-list-inner:after {
+  position: absolute;
+  right: -21px;
+  top: -25px;
+  width: 137px;
+  height: 498px;
+  content: url(../img/pic2-bg.png);
+}
+
+main #content-top .p21 {
+  padding-right: 21px;
+}
+
+main #help-block {
+  background-color: #f2f3f5;
+  padding-top: 55px;
+  padding-bottom: 85px;
+}
+
+main #help-block .help-left-block h2 {
+  /* margin-bottom: 85px;*/
+  text-align: center;
+  font-size: 20px;
+  color: #999;
+  position: relative;
+  display: inline-block;
+}
+
+main #help-block .help-left-block h2:before {
+  width: 85px;
+  border-top: 3px solid #002f51;
+  content: "";
+  position: absolute;
+  left: 45px;
+}
+
+main #help-block .help-left-block h2 .title {
+  color: #002f51;
+  font-size: 36px;
+  margin-left: 24px;
+}
+
+main #help-block .help-right-block p {
+  font-size: 20px;
+  color: #5c5c5c;
+  line-height: 25px;
+}
+
+main #content-links-block .content-links-left-block,
+main #content-links-block .content-links-middle-block,
+main #content-links-block .content-links-right-block {
+  background-color: #01293d;
+  /* width: 640px;*/
+  /* width: 623px;*/
+  height: 528px;
+  position: relative;
+}
+
+main #content-links-block .content-links-left-block .content-links-left-block-inner,
+main #content-links-block .content-links-left-block .content-links-middle-block-inner,
+main #content-links-block .content-links-left-block .content-links-right-block-inner,
+main #content-links-block .content-links-middle-block .content-links-left-block-inner,
+main #content-links-block .content-links-middle-block .content-links-middle-block-inner,
+main #content-links-block .content-links-middle-block .content-links-right-block-inner,
+main #content-links-block .content-links-right-block .content-links-left-block-inner,
+main #content-links-block .content-links-right-block .content-links-middle-block-inner,
+main #content-links-block .content-links-right-block .content-links-right-block-inner {
+  width: 378px;
+  height: 260px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+main #content-links-block .content-links-left-block .content-links-left-block-inner a,
+main #content-links-block .content-links-left-block .content-links-middle-block-inner a,
+main #content-links-block .content-links-left-block .content-links-right-block-inner a,
+main #content-links-block .content-links-middle-block .content-links-left-block-inner a,
+main #content-links-block .content-links-middle-block .content-links-middle-block-inner a,
+main #content-links-block .content-links-middle-block .content-links-right-block-inner a,
+main #content-links-block .content-links-right-block .content-links-left-block-inner a,
+main #content-links-block .content-links-right-block .content-links-middle-block-inner a,
+main #content-links-block .content-links-right-block .content-links-right-block-inner a {
+  display: inline-block;
+}
+
+main #content-links-block .content-links-left-block .content-links-left-block-inner a fieldset,
+main #content-links-block .content-links-left-block .content-links-middle-block-inner a fieldset,
+main #content-links-block .content-links-left-block .content-links-right-block-inner a fieldset,
+main #content-links-block .content-links-middle-block .content-links-left-block-inner a fieldset,
+main #content-links-block .content-links-middle-block .content-links-middle-block-inner a fieldset,
+main #content-links-block .content-links-middle-block .content-links-right-block-inner a fieldset,
+main #content-links-block .content-links-right-block .content-links-left-block-inner a fieldset,
+main #content-links-block .content-links-right-block .content-links-middle-block-inner a fieldset,
+main #content-links-block .content-links-right-block .content-links-right-block-inner a fieldset {
+  padding-right: 40px;
+  padding-left: 40px;
+  border: 1px solid #fff;
+}
+
+main #content-links-block .content-links-left-block .content-links-left-block-inner a fieldset legend,
+main #content-links-block .content-links-left-block .content-links-middle-block-inner a fieldset legend,
+main #content-links-block .content-links-left-block .content-links-right-block-inner a fieldset legend,
+main #content-links-block .content-links-middle-block .content-links-left-block-inner a fieldset legend,
+main #content-links-block .content-links-middle-block .content-links-middle-block-inner a fieldset legend,
+main #content-links-block .content-links-middle-block .content-links-right-block-inner a fieldset legend,
+main #content-links-block .content-links-right-block .content-links-left-block-inner a fieldset legend,
+main #content-links-block .content-links-right-block .content-links-middle-block-inner a fieldset legend,
+main #content-links-block .content-links-right-block .content-links-right-block-inner a fieldset legend {
+  color: #fff;
+  text-align: center;
+  font-size: 28px;
+}
+
+main #content-links-block .content-links-left-block .content-links-left-block-inner a fieldset .links-icon1-list,
+main #content-links-block .content-links-left-block .content-links-middle-block-inner a fieldset .links-icon1-list,
+main #content-links-block .content-links-left-block .content-links-right-block-inner a fieldset .links-icon1-list,
+main #content-links-block .content-links-middle-block .content-links-left-block-inner a fieldset .links-icon1-list,
+main #content-links-block .content-links-middle-block .content-links-middle-block-inner a fieldset .links-icon1-list,
+main #content-links-block .content-links-middle-block .content-links-right-block-inner a fieldset .links-icon1-list,
+main #content-links-block .content-links-right-block .content-links-left-block-inner a fieldset .links-icon1-list,
+main #content-links-block .content-links-right-block .content-links-middle-block-inner a fieldset .links-icon1-list,
+main #content-links-block .content-links-right-block .content-links-right-block-inner a fieldset .links-icon1-list {
+  margin: 25px 0;
+}
+
+main #content-links-block .content-links-left-block .content-links-left-block-inner a fieldset p,
+main #content-links-block .content-links-left-block .content-links-middle-block-inner a fieldset p,
+main #content-links-block .content-links-left-block .content-links-right-block-inner a fieldset p,
+main #content-links-block .content-links-middle-block .content-links-left-block-inner a fieldset p,
+main #content-links-block .content-links-middle-block .content-links-middle-block-inner a fieldset p,
+main #content-links-block .content-links-middle-block .content-links-right-block-inner a fieldset p,
+main #content-links-block .content-links-right-block .content-links-left-block-inner a fieldset p,
+main #content-links-block .content-links-right-block .content-links-middle-block-inner a fieldset p,
+main #content-links-block .content-links-right-block .content-links-right-block-inner a fieldset p {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+main #content-links-block .content-links-middle-block {
+  background-color: #012131;
+  /* width: 640px;*/
+  height: 528px;
+}
+
+main #content-links-block .content-links-right-block {
+  background-color: #011a26;
+  /* width: 640px;*/
+  height: 528px;
+}
+
+main #about-us-block .about-us-top {
+  background: url("../img/about-bg.png") no-repeat;
+  width: 100%;
+  height: 819px;
+  padding-top: 210px;
+  padding-bottom: 35px;
+}
+
+main #about-us-block .about-us-top .about-us-top-txt h2 {
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: 20px;
+  color: #999;
+  position: relative;
+  display: inline-block;
+}
+
+main #about-us-block .about-us-top .about-us-top-txt h2:before {
+  width: 85px;
+  border-top: 3px solid #002f51;
+  content: "";
+  position: absolute;
+  left: 18px;
+}
+
+main #about-us-block .about-us-top .about-us-top-txt h2 .title {
+  color: #002f51;
+  font-size: 36px;
+  margin-left: 24px;
+}
+
+main #about-us-block .about-us-top .about-us-top-txt p {
+  color: #7f7f7f;
+  font-size: 23px;
+  line-height: 28px;
+}
+
+main #organizational-structure {
+  background: url("../img/org-structure-bg.png") no-repeat;
+  height: 410px;
+  width: 100%;
+}
+
+main #organizational-structure .organizational-structure-left {
+  padding-top: 92px;
+}
+
+main #organizational-structure .organizational-structure-left h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+main #organizational-structure .organizational-structure-left h2:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 3px solid #e8b401;
+  width: 61px;
+  content: "";
+}
+
+main #organizational-structure .organizational-structure-left p {
+  line-height: 33px;
+  color: #fff;
+}
+
+main #organizational-structure .organizational-structure-right {
+  margin-top: 144px;
+  background-color: #fff;
+}
+
+main #organizational-structure .organizational-structure-right form {
+  padding: 55px 30px 42px;
+}
+
+main #organizational-structure .organizational-structure-right form .left-block .left-block-top, main #organizational-structure .organizational-structure-right form .left-block .left-block-bottom,
+main #organizational-structure .organizational-structure-right form .left-block .left-block-top, main #organizational-structure .organizational-structure-right form .left-block .left-block-bottom,
+main #organizational-structure .organizational-structure-right form .left-block .right-block-top, main #organizational-structure .organizational-structure-right form .left-block .right-block-bottom, main #organizational-structure .organizational-structure-right form .right-block .left-block-top, main #organizational-structure .organizational-structure-right form .right-block .left-block-bottom,
+main #organizational-structure .organizational-structure-right form .right-block .left-block-top, main #organizational-structure .organizational-structure-right form .right-block .left-block-bottom,
+main #organizational-structure .organizational-structure-right form .right-block .right-block-top, main #organizational-structure .organizational-structure-right form .right-block .right-block-bottom {
+  border-bottom: 1px solid #6c7a81;
+  margin-bottom: 40px;
+}
+
+main #organizational-structure .organizational-structure-right form .left-block .left-block-top input, main #organizational-structure .organizational-structure-right form .left-block .left-block-bottom input,
+main #organizational-structure .organizational-structure-right form .left-block .left-block-top input, main #organizational-structure .organizational-structure-right form .left-block .left-block-bottom input,
+main #organizational-structure .organizational-structure-right form .left-block .right-block-top input, main #organizational-structure .organizational-structure-right form .left-block .right-block-bottom input, main #organizational-structure .organizational-structure-right form .right-block .left-block-top input, main #organizational-structure .organizational-structure-right form .right-block .left-block-bottom input,
+main #organizational-structure .organizational-structure-right form .right-block .left-block-top input, main #organizational-structure .organizational-structure-right form .right-block .left-block-bottom input,
+main #organizational-structure .organizational-structure-right form .right-block .right-block-top input, main #organizational-structure .organizational-structure-right form .right-block .right-block-bottom input {
+  padding: 5px;
+  font-size: 13px;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+main #organizational-structure .organizational-structure-right form .left-block .left-block-top input::-webkit-input-placeholder, main #organizational-structure .organizational-structure-right form .left-block .left-block-bottom input::-webkit-input-placeholder,
+main #organizational-structure .organizational-structure-right form .left-block .left-block-top input::-webkit-input-placeholder, main #organizational-structure .organizational-structure-right form .left-block .left-block-bottom input::-webkit-input-placeholder,
+main #organizational-structure .organizational-structure-right form .left-block .right-block-top input::-webkit-input-placeholder, main #organizational-structure .organizational-structure-right form .left-block .right-block-bottom input::-webkit-input-placeholder, main #organizational-structure .organizational-structure-right form .right-block .left-block-top input::-webkit-input-placeholder, main #organizational-structure .organizational-structure-right form .right-block .left-block-bottom input::-webkit-input-placeholder,
+main #organizational-structure .organizational-structure-right form .right-block .left-block-top input::-webkit-input-placeholder, main #organizational-structure .organizational-structure-right form .right-block .left-block-bottom input::-webkit-input-placeholder,
+main #organizational-structure .organizational-structure-right form .right-block .right-block-top input::-webkit-input-placeholder, main #organizational-structure .organizational-structure-right form .right-block .right-block-bottom input::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #011a26 !important;
+  font-size: 13px;
+}
+
+main #organizational-structure .organizational-structure-right form .left-block .left-block-top input:-moz-placeholder, main #organizational-structure .organizational-structure-right form .left-block .left-block-bottom input:-moz-placeholder,
+main #organizational-structure .organizational-structure-right form .left-block .left-block-top input:-moz-placeholder, main #organizational-structure .organizational-structure-right form .left-block .left-block-bottom input:-moz-placeholder,
+main #organizational-structure .organizational-structure-right form .left-block .right-block-top input:-moz-placeholder, main #organizational-structure .organizational-structure-right form .left-block .right-block-bottom input:-moz-placeholder, main #organizational-structure .organizational-structure-right form .right-block .left-block-top input:-moz-placeholder, main #organizational-structure .organizational-structure-right form .right-block .left-block-bottom input:-moz-placeholder,
+main #organizational-structure .organizational-structure-right form .right-block .left-block-top input:-moz-placeholder, main #organizational-structure .organizational-structure-right form .right-block .left-block-bottom input:-moz-placeholder,
+main #organizational-structure .organizational-structure-right form .right-block .right-block-top input:-moz-placeholder, main #organizational-structure .organizational-structure-right form .right-block .right-block-bottom input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #011a26 !important;
+  font-size: 13px;
+}
+
+main #organizational-structure .organizational-structure-right form .left-block .left-block-top input::-moz-placeholder, main #organizational-structure .organizational-structure-right form .left-block .left-block-bottom input::-moz-placeholder,
+main #organizational-structure .organizational-structure-right form .left-block .left-block-top input::-moz-placeholder, main #organizational-structure .organizational-structure-right form .left-block .left-block-bottom input::-moz-placeholder,
+main #organizational-structure .organizational-structure-right form .left-block .right-block-top input::-moz-placeholder, main #organizational-structure .organizational-structure-right form .left-block .right-block-bottom input::-moz-placeholder, main #organizational-structure .organizational-structure-right form .right-block .left-block-top input::-moz-placeholder, main #organizational-structure .organizational-structure-right form .right-block .left-block-bottom input::-moz-placeholder,
+main #organizational-structure .organizational-structure-right form .right-block .left-block-top input::-moz-placeholder, main #organizational-structure .organizational-structure-right form .right-block .left-block-bottom input::-moz-placeholder,
+main #organizational-structure .organizational-structure-right form .right-block .right-block-top input::-moz-placeholder, main #organizational-structure .organizational-structure-right form .right-block .right-block-bottom input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #011a26 !important;
+  font-size: 13px;
+}
+
+main #organizational-structure .organizational-structure-right form .left-block .left-block-top input:-ms-input-placeholder, main #organizational-structure .organizational-structure-right form .left-block .left-block-bottom input:-ms-input-placeholder,
+main #organizational-structure .organizational-structure-right form .left-block .left-block-top input:-ms-input-placeholder, main #organizational-structure .organizational-structure-right form .left-block .left-block-bottom input:-ms-input-placeholder,
+main #organizational-structure .organizational-structure-right form .left-block .right-block-top input:-ms-input-placeholder, main #organizational-structure .organizational-structure-right form .left-block .right-block-bottom input:-ms-input-placeholder, main #organizational-structure .organizational-structure-right form .right-block .left-block-top input:-ms-input-placeholder, main #organizational-structure .organizational-structure-right form .right-block .left-block-bottom input:-ms-input-placeholder,
+main #organizational-structure .organizational-structure-right form .right-block .left-block-top input:-ms-input-placeholder, main #organizational-structure .organizational-structure-right form .right-block .left-block-bottom input:-ms-input-placeholder,
+main #organizational-structure .organizational-structure-right form .right-block .right-block-top input:-ms-input-placeholder, main #organizational-structure .organizational-structure-right form .right-block .right-block-bottom input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #011a26 !important;
+  font-size: 13px;
+}
+
+main #organizational-structure .organizational-structure-right form .left-block .right-block-top input, main #organizational-structure .organizational-structure-right form .left-block .right-block-bottom input, main #organizational-structure .organizational-structure-right form .right-block .right-block-top input, main #organizational-structure .organizational-structure-right form .right-block .right-block-bottom input {
+  width: 100%;
+}
+
+main #organizational-structure .organizational-structure-right form button {
+  width: 100%;
+  border: 0;
+  background-color: #e8b401;
+  color: #01293d;
+  height: 45px;
+}
+
+main #submission-block, main #feedback-block {
+  padding-top: 82px;
+  padding-bottom: 63px;
+}
+
+main #submission-block .submission-left-block, main #feedback-block .submission-left-block {
+  background: url("../img/submission.png") no-repeat top center;
+  /* width: 475px;*/
+  width: 100%;
+  height: 316px;
+  position: relative;
+  background-size: cover;
+}
+
+main #submission-block .submission-left-block:after, main #feedback-block .submission-left-block:after {
+  position: absolute;
+  left: -25px;
+  top: -20px;
+  width: 97px;
+  height: 354px;
+  content: url(../img/pics-bg.png);
+}
+
+main #submission-block .submission-left-block .p25, main #feedback-block .submission-left-block .p25 {
+  padding-left: 25px;
+}
+
+main #submission-block .submission-right-block .title, main #feedback-block .submission-right-block .title {
+  color: #828282;
+  border-bottom: 3px solid #002f51;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  width: 90px;
+}
+
+main #submission-block .submission-right-block h2, main #feedback-block .submission-right-block h2 {
+  margin-left: 23px;
+  margin-bottom: 30px;
+  font-size: 36px;
+  color: #002f51;
+}
+
+main #submission-block .submission-right-block p, main #feedback-block .submission-right-block p {
+  line-height: 27px;
+  color: #5c5c5c;
+  margin-bottom: 30px;
+}
+
+main #submission-block .submission-right-block a, main #feedback-block .submission-right-block a {
+  width: 117px;
+  height: 30px;
+  border: 1px solid #01293d;
+  color: #002f51;
+  font-size: 20px;
+  background-color: #fff;
+  display: inline-block;
+  text-align: center;
+}
+
+main #associates-block {
+  background-color: #f2f3f5;
+}
+
+main #associates-block .associates-left {
+  padding-top: 90px;
+  padding-bottom: 83px;
+}
+
+main #associates-block .associates-left .title {
+  color: #828282;
+  border-bottom: 3px solid #002f51;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  width: 90px;
+}
+
+main #associates-block .associates-left h2 {
+  margin-left: 23px;
+  margin-bottom: 30px;
+  font-size: 36px;
+  color: #002f51;
+}
+
+main #associates-block .associates-left p {
+  line-height: 27px;
+  color: #5c5c5c;
+  margin-bottom: 30px;
+}
+
+main #associates-block .associates-left a {
+  width: 117px;
+  height: 30px;
+  border: 1px solid #01293d;
+  color: #002f51;
+  font-size: 20px;
+  background-color: #fff;
+  display: inline-block;
+  text-align: center;
+}
+
+main #associates-block .associates-right {
+  background: url("../img/associates-pic.png") no-repeat top center;
+  width: 100%;
+  height: 454px;
+  background-size: cover;
+}
+
+main #contact-block {
+  background: url("../img/contacts-bg.png") no-repeat;
+  height: 582px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main #contact-block .contact-block-bg {
+  background-color: rgba(1, 26, 38, 0.6);
+  width: 100%;
+  height: 80%;
+}
+
+main #contact-block .contact-block-bg .contact-left {
+  padding-top: 88px;
+  text-align: center;
+}
+
+main #contact-block .contact-block-bg .contact-left h2 {
+  color: #fff;
+  font-size: 45px;
+  margin-bottom: 35px;
+}
+
+main #contact-block .contact-block-bg .contact-left p {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+main #contact-block .contact-block-bg .contact-left p:last-child {
+  margin-bottom: 50px;
+}
+
+main #contact-block .contact-block-bg .contact-left .social ul {
+  display: inline-block;
+}
+
+main #contact-block .contact-block-bg .contact-left .social ul li {
+  float: left;
+  margin-right: 15px;
+}
+
+main #contact-block .contact-block-bg .contact-left .social ul li:last-child {
+  margin-right: 0;
+}
+
+main #contact-block .contact-block-bg .contact-left .social ul li a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+main #contact-block .contact-block-bg .contact-left .social ul li .fb {
+  background-position: -2px -2px;
+}
+
+main #contact-block .contact-block-bg .contact-left .social ul li .in {
+  background-position: -40px -2px;
+}
+
+main #contact-block .contact-block-bg .contact-left .social ul li .google {
+  background-position: -77px -2px;
+}
+
+main #contact-block .contact-block-bg .contact-left .social ul li .twitter {
+  background-position: -116px -2px;
+}
+
+main #contact-block .contact-block-bg .contact-left .social ul li .skype {
+  background-position: -153px -2px;
+}
+
+main #contact-block .contact-block-bg .contact-right {
+  padding-top: 40px;
+  padding-bottom: 35px;
+}
+
+main #contact-block .contact-block-bg .contact-right form .name-email-block {
+  margin-bottom: 20px;
+}
+
+main #contact-block .contact-block-bg .contact-right form .name-email-block input {
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid #fff;
+  width: 275px;
+  height: 40px;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 20px;
+}
+
+main #contact-block .contact-block-bg .contact-right form .name-email-block input::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #fff !important;
+  font-size: 20px;
+}
+
+main #contact-block .contact-block-bg .contact-right form .name-email-block input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff !important;
+  font-size: 20px;
+}
+
+main #contact-block .contact-block-bg .contact-right form .name-email-block input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff !important;
+  font-size: 20px;
+}
+
+main #contact-block .contact-block-bg .contact-right form .name-email-block input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #fff !important;
+  font-size: 20px;
+}
+
+main #contact-block .contact-block-bg .contact-right form .phone {
+  margin-bottom: 20px;
+}
+
+main #contact-block .contact-block-bg .contact-right form .phone input {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid #fff;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 20px;
+}
+
+main #contact-block .contact-block-bg .contact-right form .phone input::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #fff !important;
+  font-size: 20px;
+}
+
+main #contact-block .contact-block-bg .contact-right form .phone input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff !important;
+  font-size: 20px;
+}
+
+main #contact-block .contact-block-bg .contact-right form .phone input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff !important;
+  font-size: 20px;
+}
+
+main #contact-block .contact-block-bg .contact-right form .phone input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #fff !important;
+  font-size: 20px;
+}
+
+main #contact-block .contact-block-bg .contact-right form textarea {
+  width: 100%;
+  height: 220px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid #fff;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+main #contact-block .contact-block-bg .contact-right form textarea::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #fff !important;
+  font-size: 20px;
+}
+
+main #contact-block .contact-block-bg .contact-right form textarea:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff !important;
+  font-size: 20px;
+}
+
+main #contact-block .contact-block-bg .contact-right form textarea::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff !important;
+  font-size: 20px;
+}
+
+main #contact-block .contact-block-bg .contact-right form textarea:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #fff !important;
+  font-size: 20px;
+}
+
+main #contact-block .contact-block-bg .contact-right form button {
+  width: 147px;
+  height: 43px;
+  color: #fff;
+  background-color: #e8b401;
+  border: 0;
+  float: right;
+}
+
+main .associates-page, main .submission-page {
+  width: 100%;
+  height: 996px;
+  position: relative;
+}
+
+main .associates-page .associates-page-inner, main .submission-page .associates-page-inner {
+  background: #fff;
+  width: 769px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg, main .submission-page .associates-page-inner .associates-page-inner-bg {
+  background: url("../img/associates-inner-bg.png") no-repeat top center;
+  height: 995px;
+  width: 100%;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner {
+  padding: 145px 80px 0 97px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner h2, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #002f51;
+  margin-bottom: 58px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block {
+  margin-bottom: 20px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input {
+  width: 285px;
+  background-color: #fff;
+  height: 43px;
+  border: 1px solid #01293d;
+  padding: 0 13px;
+  margin-right: 18px;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input:last-child, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input:last-child {
+  margin-right: 0;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input::-webkit-input-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input:-moz-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input::-moz-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input:-ms-input-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input:active, main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input:focus, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input:active, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input:focus {
+  border: 1px solid #e8b401;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .number-block, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .number-block {
+  margin-bottom: 30px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .number-block input, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .number-block input {
+  width: 100%;
+  height: 43px;
+  border: 1px solid #01293d;
+  padding: 0 13px;
+  background-color: #fff;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .number-block input::-webkit-input-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .number-block input::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .number-block input:-moz-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .number-block input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .number-block input::-moz-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .number-block input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .number-block input:-ms-input-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .number-block input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .number-block input:active, main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .number-block input:focus, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .number-block input:active, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .number-block input:focus {
+  border: 1px solid #e8b401;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .radio-button-block, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .radio-button-block {
+  margin: 0 40px 35px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .radio-button-block .radio-button-left .radio-button-list input[type="radio"], main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .radio-button-block .radio-button-right .radio-button-list input[type="radio"], main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .radio-button-block .radio-button-left .radio-button-list input[type="radio"], main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .radio-button-block .radio-button-right .radio-button-list input[type="radio"] {
+  display: none;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .radio-button-block .radio-button-left .radio-button-list label, main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .radio-button-block .radio-button-right .radio-button-list label, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .radio-button-block .radio-button-left .radio-button-list label, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .radio-button-block .radio-button-right .radio-button-list label {
+  position: relative;
+  padding-left: 13px;
+  font-size: 18px;
+  line-height: 20px;
+  float: left;
+  margin-bottom: 15px;
+  color: #01293d;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .radio-button-block .radio-button-left .radio-button-list label:before, main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .radio-button-block .radio-button-right .radio-button-list label:before, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .radio-button-block .radio-button-left .radio-button-list label:before, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .radio-button-block .radio-button-right .radio-button-list label:before {
+  display: block;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-image: url(../img/radio.png);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  content: "";
+  left: -13px;
+  top: 5px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .radio-button-block .radio-button-left .radio-button-list input[type="radio"]:checked + label:before, main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .radio-button-block .radio-button-right .radio-button-list input[type="radio"]:checked + label:before, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .radio-button-block .radio-button-left .radio-button-list input[type="radio"]:checked + label:before, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .radio-button-block .radio-button-right .radio-button-list input[type="radio"]:checked + label:before {
+  background-position: 0 0;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form textarea, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form textarea {
+  width: 100%;
+  height: 108px;
+  border: 1px solid #01293d;
+  padding: 10px 13px;
+  background-color: #fff;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form textarea::-webkit-input-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form textarea::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form textarea:-moz-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form textarea:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form textarea::-moz-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form textarea::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form textarea:-ms-input-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form textarea:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .submission-textarea, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .submission-textarea {
+  width: 100%;
+  height: 175px;
+  border: 1px solid #01293d;
+  padding: 10px 13px;
+  background-color: #fff;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .submission-textarea::-webkit-input-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .submission-textarea::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .submission-textarea:-moz-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .submission-textarea:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .submission-textarea::-moz-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .submission-textarea::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .submission-textarea:-ms-input-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .submission-textarea:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block {
+  margin-bottom: 25px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .select-block, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .select-block {
+  position: relative;
+  width: 286px;
+  margin-right: 15px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .select-block select, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .select-block select {
+  width: 100%;
+  height: 44px;
+  border: 1px solid #01293d;
+  padding: 0 15px;
+  background-color: #fff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  font-size: 18px;
+  color: #91a0a8;
+  margin-right: 13px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .select-block:after, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .select-block:after {
+  content: "\f0d7";
+  position: absolute;
+  right: 15px;
+  top: 0;
+  font-family: FontAwesome;
+  font-size: 35px;
+  pointer-events: none;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .upload-block, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .upload-block {
+  position: relative;
+  height: 44px;
+  text-align: center;
+  display: table;
+  /*input:hover {
+                  opacity: 0.2;
+                }*/
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .upload-block input, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .upload-block input {
+  background-color: black;
+  color: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+  /*text-indent: -100px;*/
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .upload-block .upload, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .upload-block .upload {
+  background-color: #bdbdbd;
+  color: #01293d;
+  width: 290px;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 24px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form button, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form button {
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  background-color: #e8b401;
+  border: 0;
+  font-size: 24px;
+  font-family: 'robotobold';
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-top, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-top {
+  margin-bottom: 30px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-top input, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-top input {
+  width: 100%;
+  height: 43px;
+  border: 1px solid #01293d;
+  padding: 0 13px;
+  background-color: #fff;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-top input::-webkit-input-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-top input::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-top input:-moz-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-top input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-top input::-moz-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-top input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-top input:-ms-input-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-top input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-top input:active, main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-top input:focus, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-top input:active, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-top input:focus {
+  border: 1px solid #e8b401;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-bottom textarea, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-bottom textarea {
+  width: 100%;
+  height: 108px;
+  border: 1px solid #01293d;
+  padding: 10px 13px;
+  background-color: #fff;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-bottom textarea::-webkit-input-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-bottom textarea::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-bottom textarea:-moz-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-bottom textarea:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-bottom textarea::-moz-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-bottom textarea::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-bottom textarea:-ms-input-placeholder, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .feedback-input-bottom textarea:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #91a0a8 !important;
+  font-size: 18px;
+}
+
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form p, main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form p {
+  margin-bottom: 20px;
+  color: #01293d;
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+main .associates-page .associates-page-right-bg, main .submission-page .associates-page-right-bg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: url("../img/inner-page-bg.png") no-repeat;
+  width: 131px;
+  height: 100%;
+}
+
+main .associates-page {
+  background: url("../img/associates-page-bg.png") no-repeat top center;
+}
+
+main .submission-page {
+  background: url("../img/submission-bg.png") no-repeat top center;
+}
+
+footer {
+  background-color: #01293d;
+  height: 57px;
+  width: 100%;
+  line-height: 57px;
+}
+
+footer p {
+  color: #fff;
+  font-size: 16px;
+}
+
+footer .footer-menu {
+  float: right;
+}
+
+footer .footer-menu ul li {
+  float: left;
+  margin-right: 15px;
+}
+
+footer .footer-menu ul li:last-child {
+  margin-right: 0;
+}
+
+footer .footer-menu ul li a {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+@media only screen and (max-width: 1930px) {
+  main .slider-block .slider-right-block {
+    width: 70%;
+  }
+  main .slider-block .slider-left-block {
+    width: 30%;
+  }
+  main .slider-block .slider-left-block .slider-left-block-inner p {
+    font-size: 40px;
+    line-height: 60px;
+  }
+}
+
+@media only screen and (max-width: 1700px) {
+  header #first-block-content ul li a {
+    font-size: 16px;
+  }
+  header #first-block-content h1 a {
+    width: 50%;
+  }
+  main .slider-block .slider-left-block .slider-left-block-inner {
+    left: 30px;
+    right: 30px;
+  }
+  main .slider-block .slider-left-block .slider-left-block-inner p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  main .slider-block .slider-left-block .slider-left-block-inner {
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 1470px) {
+  footer {
+    height: auto;
+  }
+  footer .footer-menu ul li a, footer p {
+    font-size: 10px;
+  }
+  footer .footer-menu ul li {
+    margin-right: 5px;
+  }
+  .footer-cont {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  /*footer .footer-menu {
+    float: none;
+  }
+*/
+  footer .footer-menu ul li a, footer p {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  header #first-block-content ul li {
+    margin-right: 25px;
+  }
+}
+
+@media only screen and (max-width: 1380px) {
+  header #first-block-content h1 {
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  main .associates-page .associates-page-right-bg, main .submission-page .associates-page-right-bg {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1270px) {
+  main .slider-block .slider-right-block {
+    /*background-size: contain;*/
+  }
+  main #content-links-block .content-links-left-block .content-links-left-block-inner,
+  main #content-links-block .content-links-left-block .content-links-middle-block-inner,
+  main #content-links-block .content-links-left-block .content-links-right-block-inner,
+  main #content-links-block .content-links-middle-block .content-links-left-block-inner,
+  main #content-links-block .content-links-middle-block .content-links-middle-block-inner,
+  main #content-links-block .content-links-middle-block .content-links-right-block-inner,
+  main #content-links-block .content-links-right-block .content-links-left-block-inner,
+  main #content-links-block .content-links-right-block .content-links-middle-block-inner,
+  main #content-links-block .content-links-right-block .content-links-right-block-inner {
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 1265px) {
+  header #first-block-content ul li {
+    margin-right: 15px;
+  }
+  header #first-block-content ul li:last-child {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  header #first-block-content ul li a {
+    font-size: 14px;
+  }
+  main #content-links-block .content-links-left-block .content-links-left-block-inner a fieldset legend,
+  main #content-links-block .content-links-left-block .content-links-middle-block-inner a fieldset legend,
+  main #content-links-block .content-links-left-block .content-links-right-block-inner a fieldset legend,
+  main #content-links-block .content-links-middle-block .content-links-left-block-inner a fieldset legend,
+  main #content-links-block .content-links-middle-block .content-links-middle-block-inner a fieldset legend,
+  main #content-links-block .content-links-middle-block .content-links-right-block-inner a fieldset legend,
+  main #content-links-block .content-links-right-block .content-links-left-block-inner a fieldset legend,
+  main #content-links-block .content-links-right-block .content-links-middle-block-inner a fieldset legend,
+  main #content-links-block .content-links-right-block .content-links-right-block-inner a fieldset legend {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  main #about-us-block .about-us-top .about-us-top-txt p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  main #contact-block .contact-block-bg .contact-right {
+    padding-top: 20px;
+  }
+  main #contact-block .contact-block-bg .contact-right form .name-email-block input {
+    width: 100%;
+  }
+  main #contact-block .contact-block-bg .contact-right form textarea {
+    height: 190px;
+  }
+  main #contact-block .contact-block-bg .contact-right form .name-email-block input:first-child {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 1040px) {
+  header #first-block-content ul li {
+    margin-right: 12px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .nav-icon {
+    display: block !important;
+    color: #fff;
+  }
+  header #first-block-content ul, header #first-block-content ul li, header #first-block-content h1 {
+    float: none;
+  }
+  header, header #first-block-content, header #first-block-content ul, header #first-block-content ul li {
+    height: auto;
+  }
+  header #first-block-content h1 {
+    text-align: center;
+  }
+  header #first-block-content ul {
+    display: block;
+    position: absolute;
+    left: 30px;
+    top: 75px;
+    margin-top: 40px;
+  }
+  header #first-block-content ul li a {
+    line-height: 3;
+  }
+  header {
+    height: 102px;
+    overflow: hidden;
+    transition: 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: 22;
+    top: 0;
+  }
+  header.menu-open {
+    height: 500px;
+    transition: 0.5s;
+  }
+  .login-inner {
+    width: 100%;
+    top: 0;
+    height: 500px;
+  }
+  .m100 {
+    margin-top: 100px;
+  }
+  main .slider-block .slider-left-block {
+    float: none !important;
+    width: 100%;
+  }
+  main .slider-block .slider-right-block {
+    float: none !important;
+    width: 100%;
+  }
+  main .slider-block .slider-left-block .slider-left-block-inner {
+    text-align: center;
+  }
+  main .carousel-indicators {
+    width: auto;
+  }
+  main .slider-block .slider-left-block {
+    height: 500px;
+  }
+  main .slider-block .slider-right-block {
+    background: url(../img/pic1.png) no-repeat top center;
+    height: 500px;
+  }
+  main .associates-page .associates-page-inner, main .submission-page .associates-page-inner {
+    width: auto;
+  }
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input {
+    width: 100%;
+  }
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input:first-child,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input:first-child {
+    margin-bottom: 20px;
+  }
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .select-block,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .select-block {
+    float: none !important;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .upload-block input,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .upload-block input {
+    position: static;
+    width: 100%;
+  }
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .upload-block .upload,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .upload-block .upload {
+    width: 100%;
+    font-size: 20px;
+  }
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .upload-block,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .upload-block {
+    float: none !important;
+  }
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .submission-textarea,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .submission-textarea,
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form textarea,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form textarea {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  main #content-top .content-top-left-list h2,
+  main #help-block .help-left-block h2 {
+    font-size: 16px;
+  }
+  main #content-top .content-top-left-list h2 .title,
+  main #help-block .help-left-block h2 .title {
+    font-size: 25px;
+  }
+  main #content-top .content-top-left-list h2:before,
+  main #help-block .help-left-block h2:before {
+    left: 25px;
+  }
+  .content-top-left-list {
+    text-align: center;
+  }
+  main #content-top .content-top-left-list h2 {
+    margin-bottom: 60px;
+  }
+  .signature-pic {
+    margin-bottom: 50px;
+  }
+  main #content-top .content-top-left-list p {
+    width: auto;
+  }
+  main #content-links-block .content-links-left-block .content-links-left-block-inner a fieldset p,
+  main #content-links-block .content-links-left-block .content-links-middle-block-inner a fieldset p,
+  main #content-links-block .content-links-left-block .content-links-right-block-inner a fieldset p,
+  main #content-links-block .content-links-middle-block .content-links-left-block-inner a fieldset p,
+  main #content-links-block .content-links-middle-block .content-links-middle-block-inner a fieldset p,
+  main #content-links-block .content-links-middle-block .content-links-right-block-inner a fieldset p,
+  main #content-links-block .content-links-right-block .content-links-left-block-inner a fieldset p,
+  main #content-links-block .content-links-right-block .content-links-middle-block-inner a fieldset p,
+  main #content-links-block .content-links-right-block .content-links-right-block-inner a fieldset p {
+    font-size: 14px;
+  }
+  main #content-links-block .content-links-left-block .content-links-left-block-inner a fieldset legend,
+  main #content-links-block .content-links-left-block .content-links-middle-block-inner a fieldset legend,
+  main #content-links-block .content-links-left-block .content-links-right-block-inner a fieldset legend,
+  main #content-links-block .content-links-middle-block .content-links-left-block-inner a fieldset legend,
+  main #content-links-block .content-links-middle-block .content-links-middle-block-inner a fieldset legend,
+  main #content-links-block .content-links-middle-block .content-links-right-block-inner a fieldset legend,
+  main #content-links-block .content-links-right-block .content-links-left-block-inner a fieldset legend,
+  main #content-links-block .content-links-right-block .content-links-middle-block-inner a fieldset legend,
+  main #content-links-block .content-links-right-block .content-links-right-block-inner a fieldset legend {
+    font-size: 16px;
+  }
+  main #content-links-block .content-links-left-block .content-links-left-block-inner a fieldset,
+  main #content-links-block .content-links-left-block .content-links-middle-block-inner a fieldset,
+  main #content-links-block .content-links-left-block .content-links-right-block-inner a fieldset,
+  main #content-links-block .content-links-middle-block .content-links-left-block-inner a fieldset,
+  main #content-links-block .content-links-middle-block .content-links-middle-block-inner a fieldset,
+  main #content-links-block .content-links-middle-block .content-links-right-block-inner a fieldset,
+  main #content-links-block .content-links-right-block .content-links-left-block-inner a fieldset,
+  main #content-links-block .content-links-right-block .content-links-middle-block-inner a fieldset,
+  main #content-links-block .content-links-right-block .content-links-right-block-inner a fieldset {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  main #about-us-block .about-us-top .about-us-top-txt p {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: justify;
+  }
+  main #about-us-block .about-us-top {
+    height: auto;
+  }
+  main #organizational-structure .organizational-structure-left h2 {
+    font-size: 20px;
+  }
+  main #organizational-structure .organizational-structure-left h2:before {
+    top: -10px;
+  }
+  main #submission-block .submission-right-block h2, main #feedback-block .submission-right-block h2,
+  main #associates-block .associates-left h2 {
+    font-size: 25px;
+  }
+  .radio-button-left, .radio-button-right {
+    float: none !important;
+  }
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .radio-button-block,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .radio-button-block {
+    margin: 0 15px 35px;
+  }
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner h2,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner h2 {
+    font-size: 25px;
+  }
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .upload-block input,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .upload-block input {
+    overflow: hidden;
+  }
+  /*.padding131 {
+    padding-left: 0;
+    padding-right: 0;
+  }*/
+  .padding0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .radio-button-list {
+    float: none !important;
+  }
+}
+
+@media only screen and (max-width: 865px) {
+  footer .footer-menu ul li a, footer p {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .help-left-block {
+    margin-bottom: 40px;
+  }
+  main #about-us-block .about-us-top,
+  main #organizational-structure {
+    height: auto;
+  }
+  .about-us-top-pic {
+    margin-bottom: 40px;
+  }
+  main #submission-block .submission-right-block .title, main #feedback-block .submission-right-block .title {
+    margin-top: 35px;
+  }
+  main #contact-block {
+    height: auto;
+  }
+  main #contact-block .contact-block-bg .contact-left {
+    padding-top: 40px;
+  }
+  main #contact-block .contact-block-bg .contact-right {
+    padding-bottom: 65px;
+  }
+  footer .footer-menu, footer .footer-menu ul li {
+    float: none;
+  }
+  footer .footer-menu ul li a, footer p {
+    font-size: 16px;
+  }
+  footer {
+    line-height: 50px;
+    text-align: center;
+  }
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner {
+    padding: 145px 15px 0 15px;
+  }
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner h2,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner h2 {
+    font-size: 20px;
+  }
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input:first-child,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input:first-child {
+    margin-right: 0;
+  }
+}
+
+/*.login-inner .login-inner-list form .login-inner-list-bottom button {
+  margin-top: 20px;
+  float: none!important;
+}*/
+@media only screen and (max-width: 1040px) {
+  .about-us-top-txt {
+    text-align: center;
+  }
+  main #about-us-block .about-us-top .about-us-top-txt h2 {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  main #about-us-block .about-us-top .about-us-top-txt h2 .title {
+    font-size: 25px;
+  }
+  main #about-us-block .about-us-top .about-us-top-txt h2:before {
+    left: 9px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  main #submission-block .submission-right-block h2, main #feedback-block .submission-right-block h2,
+  main #associates-block .associates-left h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+  main #submission-block .submission-right-block p, main #feedback-block .submission-right-block p {
+    text-align: center;
+  }
+  main #submission-block .submission-right-block a, main #feedback-block .submission-right-block a,
+  main #associates-block .associates-left a {
+    width: 100%;
+  }
+  .login-inner .login-inner-list form .login-inner-list-bottom a {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .login-inner .login-inner-list form .login-inner-list-bottom button {
+    width: 100%;
+    float: none !important;
+    text-align: center;
+  }
+}
+
+* {
+  word-wrap: break-word;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  /* font: inherit;*/
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/*@font-face {
+  src:url('data:font/woff;base64,???????????????????????') format('woff');
+  font-family: "Open-Sans-Bold";
+  font-weight: normal;
+  font-style: normal;
+}*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.clear-fix:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.clear-both {
+  clear: both;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.fn {
+  float: none;
+}
+
+.db {
+  display: block;
+}
+
+.dn {
+  display: none;
+}
+
+.dib {
+  display: inline-block;
+}
+
+.pr {
+  position: relative;
+}
+
+.pa {
+  position: absolute;
+}
+
+.fz12 {
+  font-size: 12px;
+}
+
+.sprite, .sprite-b:before, .sprite-a:after {
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+}
+
+.sprite-b:before {
+  content: "";
+}
+
+.sprite-a:after {
+  content: "";
+}
+
+.baselight {
+  color: #fff;
+}
+
+.basedark {
+  color: #000;
+}
+
+/*google map*/
+/*delete google*/
+.gm-style > div > a img[draggable="false"] {
+  display: none;
+}
+
+/*delete google*/
+/*delete copyright*/
+#map .gmnoprint .gm-style-cc {
+  display: none;
+}
+
+#map .gm-style-cc {
+  display: none;
+}
+
+/*delete copyright*/
+/* zoom: 10,
+ center: myLatLng,
+ mapTypeControl: false,
+ disableDefaultUI: true,
+ streetViewControl: false,
+ scrollwheel: false*/
+/*google map*/
+::-ms-clear {
+  display: none;
+}
+
+:focus {
+  outline: none !important;
+}
+
+/**:hover, *:focus {
+    outline: 0;
+}*/
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+textarea {
+  resize: none;
+}
+
+input, textarea {
+  appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+}
+
+i,
+em,
+.italic {
+  font-style: italic;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+/*
+a, a:hover, a:active {
+    text-decoration: none !important;
+}
+*/
+.tu {
+  text-transform: uppercase;
+}
+
+.mln {
+  margin-left: 0 !important;
+}
+
+.padding131 {
+  padding-left: 131px;
+  padding-right: 131px;
+}
+
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.no-margin {
+  margin-right: 0;
+  margin-left: 0;
+}

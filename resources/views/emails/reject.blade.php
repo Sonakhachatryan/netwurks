@@ -1,0 +1,1 @@
+<h1> Your account has been rejected. </h1>

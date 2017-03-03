@@ -1,0 +1,56 @@
+
+
+/*.login-inner .login-inner-list form .login-inner-list-bottom button {
+  margin-top: 20px;
+  float: none!important;
+}*/
+
+@media only screen and (max-width: 1040px) {
+  .about-us-top-txt {
+    text-align: center;
+  }
+
+  main #about-us-block .about-us-top .about-us-top-txt h2 {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  main #about-us-block .about-us-top .about-us-top-txt h2 .title {
+    font-size: 25px;
+  }
+
+  main #about-us-block .about-us-top .about-us-top-txt h2:before {
+    left: 9px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  main #submission-block .submission-right-block h2, main #feedback-block .submission-right-block h2,
+  main #associates-block .associates-left h2
+  {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  main #submission-block .submission-right-block p, main #feedback-block .submission-right-block p {
+    text-align: center;
+  }
+
+  main #submission-block .submission-right-block a, main #feedback-block .submission-right-block a,
+  main #associates-block .associates-left a
+  {
+    width: 100%;
+  }
+
+  .login-inner .login-inner-list form .login-inner-list-bottom a {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .login-inner .login-inner-list form .login-inner-list-bottom button {
+    width: 100%;
+    float: none !important;
+    text-align: center;
+  }
+}

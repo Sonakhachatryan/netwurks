@@ -1,0 +1,323 @@
+
+@media only screen and (max-width: 1024px) {
+  .nav-icon {
+    display: block!important;
+    color: $baselight;
+  }
+
+  header #first-block-content ul, header #first-block-content ul li, header #first-block-content h1 {
+    float: none;
+  }
+
+  header, header #first-block-content, header #first-block-content ul, header #first-block-content ul li {
+    height: auto;
+  }
+
+  header #first-block-content h1 {
+    text-align: center;
+  }
+
+  header #first-block-content ul {
+    display: block;
+    position: absolute;
+    left: 30px;
+    top: 75px;
+    margin-top: 40px;
+  }
+
+  header #first-block-content ul li a {
+    line-height: 3;
+  }
+
+  header {
+    height: 102px;
+    overflow: hidden;
+    transition: 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: 22;
+    top: 0;
+    &.menu-open{
+      height: 500px;
+      transition: 0.5s;
+    }
+  }
+  .login-inner{
+    width: 100%;
+    top: 0;
+    height: 500px;
+  }
+  .m100 {
+    margin-top: 100px;
+  }
+
+  main .slider-block .slider-left-block {
+    float: none!important;
+    width: 100%;
+  }
+
+  main .slider-block .slider-right-block {
+    float: none!important;
+    width: 100%;
+  }
+
+  main .slider-block .slider-left-block .slider-left-block-inner {
+    text-align: center;
+  }
+
+  main .carousel-indicators {
+    width: auto;
+  }
+
+  main .slider-block .slider-left-block {
+    height: 500px;
+  }
+
+  main .slider-block .slider-right-block {
+    background: url(../img/pic1.png) no-repeat top center;
+    height: 500px;
+  }
+
+  main .associates-page .associates-page-inner, main .submission-page .associates-page-inner {
+    width: auto;
+  }
+
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input {
+    width: 100%;
+  }
+
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input:first-child,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input:first-child {
+    margin-bottom: 20px;
+  }
+
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .select-block,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .select-block {
+    float: none!important;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .upload-block input,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .upload-block input {
+    position: static;
+    width: 100%;
+  }
+
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .upload-block .upload,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .upload-block .upload {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .upload-block,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .upload-block {
+    float: none!important;
+  }
+
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .submission-textarea,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .submission-textarea,
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form textarea,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form textarea
+  {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  main #content-top .content-top-left-list h2,
+  main #help-block .help-left-block h2
+  {
+    font-size: 16px;
+  }
+
+  main #content-top .content-top-left-list h2 .title,
+  main #help-block .help-left-block h2 .title
+  {
+    font-size: 25px;
+  }
+
+  main #content-top .content-top-left-list h2:before,
+  main #help-block .help-left-block h2:before
+  {
+    left: 25px;
+  }
+
+  .content-top-left-list {
+    text-align: center;
+  }
+
+  main #content-top .content-top-left-list h2 {
+    margin-bottom: 60px;
+  }
+
+  .signature-pic {
+    margin-bottom: 50px;
+  }
+
+  main #content-top .content-top-left-list p {
+    width: auto;
+  }
+
+  main #content-links-block .content-links-left-block .content-links-left-block-inner a fieldset p,
+  main #content-links-block .content-links-left-block .content-links-middle-block-inner a fieldset p,
+  main #content-links-block .content-links-left-block .content-links-right-block-inner a fieldset p,
+  main #content-links-block .content-links-middle-block .content-links-left-block-inner a fieldset p,
+  main #content-links-block .content-links-middle-block .content-links-middle-block-inner a fieldset p,
+  main #content-links-block .content-links-middle-block .content-links-right-block-inner a fieldset p,
+  main #content-links-block .content-links-right-block .content-links-left-block-inner a fieldset p,
+  main #content-links-block .content-links-right-block .content-links-middle-block-inner a fieldset p,
+  main #content-links-block .content-links-right-block .content-links-right-block-inner a fieldset p {
+    font-size: 14px;
+  }
+
+  main #content-links-block .content-links-left-block .content-links-left-block-inner a fieldset legend,
+  main #content-links-block .content-links-left-block .content-links-middle-block-inner a fieldset legend,
+  main #content-links-block .content-links-left-block .content-links-right-block-inner a fieldset legend,
+  main #content-links-block .content-links-middle-block .content-links-left-block-inner a fieldset legend,
+  main #content-links-block .content-links-middle-block .content-links-middle-block-inner a fieldset legend,
+  main #content-links-block .content-links-middle-block .content-links-right-block-inner a fieldset legend,
+  main #content-links-block .content-links-right-block .content-links-left-block-inner a fieldset legend,
+  main #content-links-block .content-links-right-block .content-links-middle-block-inner a fieldset legend,
+  main #content-links-block .content-links-right-block .content-links-right-block-inner a fieldset legend {
+    font-size: 16px;
+  }
+
+  main #content-links-block .content-links-left-block .content-links-left-block-inner a fieldset,
+  main #content-links-block .content-links-left-block .content-links-middle-block-inner a fieldset,
+  main #content-links-block .content-links-left-block .content-links-right-block-inner a fieldset,
+  main #content-links-block .content-links-middle-block .content-links-left-block-inner a fieldset,
+  main #content-links-block .content-links-middle-block .content-links-middle-block-inner a fieldset,
+  main #content-links-block .content-links-middle-block .content-links-right-block-inner a fieldset,
+  main #content-links-block .content-links-right-block .content-links-left-block-inner a fieldset,
+  main #content-links-block .content-links-right-block .content-links-middle-block-inner a fieldset,
+  main #content-links-block .content-links-right-block .content-links-right-block-inner a fieldset {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  main #about-us-block .about-us-top .about-us-top-txt p {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: justify;
+  }
+
+  main #about-us-block .about-us-top {
+    height: auto;
+  }
+
+  main #organizational-structure .organizational-structure-left h2 {
+    font-size: 20px;
+  }
+
+  main #organizational-structure .organizational-structure-left h2:before {
+    top: -10px;
+  }
+
+  main #submission-block .submission-right-block h2, main #feedback-block .submission-right-block h2,
+  main #associates-block .associates-left h2
+  {
+    font-size: 25px;
+  }
+
+  .radio-button-left, .radio-button-right {
+    float: none!important;
+  }
+
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .radio-button-block,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .radio-button-block {
+    margin: 0 15px 35px;
+  }
+
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner h2,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner h2 {
+    font-size: 25px;
+  }
+
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .upload-block input,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .select-upload-block .upload-block input  {
+    overflow: hidden;
+  }
+
+  /*.padding131 {
+    padding-left: 0;
+    padding-right: 0;
+  }*/
+
+  .padding0 {
+    padding-left: 0!important;
+    padding-right: 0!important;
+  }
+
+  .radio-button-list {
+    float: none!important;
+  }
+}
+
+@media only screen and (max-width: 865px) {
+  footer .footer-menu ul li a, footer p {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .help-left-block {
+    margin-bottom: 40px;
+  }
+
+  main #about-us-block .about-us-top,
+  main #organizational-structure
+  {
+    height: auto;
+  }
+
+  .about-us-top-pic {
+    margin-bottom: 40px;
+  }
+
+  main #submission-block .submission-right-block .title, main #feedback-block .submission-right-block .title {
+    margin-top: 35px;
+  }
+
+  main #contact-block {
+    height: auto;
+  }
+
+  main #contact-block .contact-block-bg .contact-left {
+    padding-top: 40px;
+  }
+
+  main #contact-block .contact-block-bg .contact-right {
+    padding-bottom: 65px;
+  }
+
+  footer .footer-menu, footer .footer-menu ul li {
+    float: none;
+  }
+
+  footer .footer-menu ul li a, footer p {
+    font-size: 16px;
+  }
+
+  footer {
+    line-height: 50px;
+    text-align: center;
+  }
+
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner {
+    padding: 145px 15px 0 15px;
+  }
+
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner h2,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner h2 {
+    font-size: 20px;
+  }
+
+  main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input:first-child,
+  main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form .name-email-block input:first-child
+  {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,48 @@
+
+
+header #first-block-content ul li:not(:last-child) a:hover,
+footer .footer-menu ul li a:hover,
+.login-inner .login-inner-list form .login-inner-list-bottom a:hover
+{
+  color: #e8b401;
+}
+
+main #contact-block .contact-block-bg .contact-left .social ul li .fb:hover {
+  background-position: -2px -38px;
+}
+
+main #contact-block .contact-block-bg .contact-left .social ul li .in:hover {
+  background-position:  -40px -38px;
+}
+
+main #contact-block .contact-block-bg .contact-left .social ul li .google:hover {
+  background-position: -78px -38px;
+}
+
+main #contact-block .contact-block-bg .contact-left .social ul li .twitter:hover {
+  background-position: -116px -38px;
+}
+
+main #contact-block .contact-block-bg .contact-left .social ul li .skype:hover {
+  background-position: -154px -38px;
+}
+
+main #contact-block .contact-block-bg .contact-right form button:hover,
+main #organizational-structure .organizational-structure-right form button:hover,
+main .associates-page .associates-page-inner .associates-page-inner-bg .associates-inner form button:hover,
+main .submission-page .associates-page-inner .associates-page-inner-bg .associates-inner form button:hover
+{
+  opacity: .8;
+}
+
+main #submission-block .submission-right-block a:hover,
+main #feedback-block .submission-right-block a:hover,
+main #associates-block .associates-left a:hover
+{
+  color: #fff;
+  background-color: #01293d;
+}
+
+.login-inner .login-inner-list form .login-inner-list-bottom button:hover {
+  opacity: .9;
+}

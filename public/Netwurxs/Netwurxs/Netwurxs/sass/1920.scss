@@ -1,0 +1,166 @@
+
+
+@media only screen and (max-width: 1930px) {
+  main .slider-block .slider-right-block {
+    width: 70%;
+  }
+
+  main .slider-block .slider-left-block {
+    width: 30%;
+  }
+
+  main .slider-block .slider-left-block .slider-left-block-inner p {
+    font-size: 40px;
+    line-height: 60px;
+  }
+}
+
+@media only screen and (max-width: 1700px) {
+  header #first-block-content ul li a {
+    font-size: 16px;
+  }
+
+  header #first-block-content h1 a {
+    width: 50%;
+  }
+
+  main .slider-block .slider-left-block .slider-left-block-inner {
+    left: 30px;
+    right: 30px;
+  }
+
+  main .slider-block .slider-left-block .slider-left-block-inner p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  main .slider-block .slider-left-block .slider-left-block-inner {
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 1470px) {
+  footer {
+    height: auto;
+  }
+
+  footer .footer-menu ul li a, footer p {
+    font-size: 10px;
+  }
+
+  footer .footer-menu ul li {
+    margin-right: 5px;
+  }
+
+  .footer-cont {
+    padding-left: 0!important;
+    padding-right: 0!important;
+  }
+
+  /*footer .footer-menu {
+    float: none;
+  }
+*/
+  footer .footer-menu ul li a, footer p {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  header #first-block-content ul li {
+    margin-right: 25px;
+  }
+}
+
+@media only screen and (max-width: 1380px) {
+  header #first-block-content h1 {
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  main .associates-page .associates-page-right-bg, main .submission-page .associates-page-right-bg {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1270px) {
+  main .slider-block .slider-right-block {
+    /*background-size: contain;*/
+  }
+
+
+  main #content-links-block .content-links-left-block .content-links-left-block-inner,
+  main #content-links-block .content-links-left-block .content-links-middle-block-inner,
+  main #content-links-block .content-links-left-block .content-links-right-block-inner,
+  main #content-links-block .content-links-middle-block .content-links-left-block-inner,
+  main #content-links-block .content-links-middle-block .content-links-middle-block-inner,
+  main #content-links-block .content-links-middle-block .content-links-right-block-inner,
+  main #content-links-block .content-links-right-block .content-links-left-block-inner,
+  main #content-links-block .content-links-right-block .content-links-middle-block-inner,
+  main #content-links-block .content-links-right-block .content-links-right-block-inner
+  {
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 1265px) {
+
+  header #first-block-content ul li {
+    margin-right: 15px;
+  }
+
+  header #first-block-content ul li:last-child {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  header #first-block-content ul li a {
+    font-size: 14px;
+  }
+
+  main #content-links-block .content-links-left-block .content-links-left-block-inner a fieldset legend,
+  main #content-links-block .content-links-left-block .content-links-middle-block-inner a fieldset legend,
+  main #content-links-block .content-links-left-block .content-links-right-block-inner a fieldset legend,
+  main #content-links-block .content-links-middle-block .content-links-left-block-inner a fieldset legend,
+  main #content-links-block .content-links-middle-block .content-links-middle-block-inner a fieldset legend,
+  main #content-links-block .content-links-middle-block .content-links-right-block-inner a fieldset legend,
+  main #content-links-block .content-links-right-block .content-links-left-block-inner a fieldset legend,
+  main #content-links-block .content-links-right-block .content-links-middle-block-inner a fieldset legend,
+  main #content-links-block .content-links-right-block .content-links-right-block-inner a fieldset legend {
+    font-size: 18px;
+  }
+}
+
+
+@media only screen and (max-width: 1200px) {
+  main #about-us-block .about-us-top .about-us-top-txt p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  main #contact-block .contact-block-bg .contact-right {
+    padding-top: 20px;
+  }
+
+  main #contact-block .contact-block-bg .contact-right form .name-email-block input {
+    width: 100%;
+  }
+
+  main #contact-block .contact-block-bg .contact-right form textarea {
+    height: 190px;
+  }
+
+  main #contact-block .contact-block-bg .contact-right form .name-email-block input:first-child {
+    margin-bottom: 20px;
+  }
+}
+
+
+@media only screen and (max-width: 1040px) {
+  header #first-block-content ul li {
+    margin-right: 12px;
+  }
+}
