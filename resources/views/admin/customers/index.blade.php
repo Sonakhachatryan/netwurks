@@ -18,8 +18,8 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone</th>
-                    <th>Role</th>
-                    <th>Branch</th>
+                    <th>Industry</th>
+                    <th>Expertise area</th>
                     <th>Status</th>
                     <th>Actions</th>
                 </tr>
@@ -30,8 +30,8 @@
                         <td>{{ $customer->name }}</td>
                         <td>{{ $customer->email }}</td>
                         <td>{{ $customer->phone }}</td>
-                        <td>{{ $customer->role->name }}</td>
-                        <td>{{ $customer->branch->name }}</td>
+                        <td>{{ $customer->industry->name }}</td>
+                        <td>{{ $customer->expertise_area }}</td>
                         <td>
                             @if($customer->deleted_at != NULL)
                                 Not Active
@@ -61,8 +61,8 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone</th>
-                    <th>Role</th>
-                    <th>Branch</th>
+                    <th>Industry</th>
+                    <th>Expertise area</th>
                     <th>Status</th>
                     <th>Actions</th>
                 </tr>

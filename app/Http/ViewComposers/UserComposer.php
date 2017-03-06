@@ -14,10 +14,18 @@ class UserComposer
      */
     public function compose(View $view)
     {
-        if (auth()->guard('user')->check())
+        if (auth()->guard('customer')->check())
         {
-            $user = auth()->guard('user')->user();
-            $view->with('user', $user);
+            $customer = auth()->guard('customer')->user();
+            $view->with(['customer'=> $customer,'guard' => 'customer']);
         }
+        
+        if (auth()->guard('associate')->check())
+        {
+            $customer = auth()->guard('associate')->user();
+            $view->with(['associate'=> $customer,'guard' => 'associate']);
+        }
+
+        $view->with(['guard' => 'associate']);
     }
 }

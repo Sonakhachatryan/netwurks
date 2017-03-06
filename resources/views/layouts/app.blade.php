@@ -15,8 +15,8 @@
 <header class="">
     <div id="first-block-content">
         <h1>
-            <a href="#">
-                <img src="img/logo.png" alt="logo">
+            <a href="{{ url('/') }}">
+                <img src="{{ url('img/logo.png') }}" alt="logo">
             </a>
         </h1>
         <ul class="contentId">
@@ -57,10 +57,10 @@
             </li>
             <li>
                 <div>
-                    @if(!auth()->guard('user')->check())
+                    @if(!auth()->guard($guard)->check())
                         <a class="login-popup" href="#">Login</a>
                     @else
-                        <a href="{{ url('/home') }}">{{ $user->name }}</a>
+                        <a href="{{ url('/' . $guard . '/dashboard') }}">{{  $$guard->name }}  </a>
                     @endif
                 </div>
             </li>

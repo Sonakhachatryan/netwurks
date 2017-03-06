@@ -18,7 +18,7 @@ class Customer extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'organization',
+        'name',
         'email',
         'password',
         'phone',
@@ -41,13 +41,9 @@ class Customer extends Authenticatable
 
     protected $dates = ['deleted_at'];
     
-    public function role()
+    public function industry()
     {
-        return $this->belongsTo(Role::class);
+        return $this->belongsTo(Industry::class);
     }
     
-    public function branch()
-    {
-        return $this->belongsTo(Branch::class);
-    }
 }

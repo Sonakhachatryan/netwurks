@@ -31,7 +31,7 @@
                             <td>{{ $associate->email }}</td>
                             <td>{{ $associate->phone }}</td>
                             <td>{{ $associate->expertise_area }}</td>
-                            <td>{{ $associate->linked_in }}</td>
+                            <td><a href="{{ $associate->linked_in }}">{{ $associate->linked_in }}</a></td>
                             <td>
                                 @if($associate->deleted_at != NULL)
                                     Not Active

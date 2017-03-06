@@ -13,22 +13,32 @@ class CustomerController extends Controller
 
     public function index()
     {
-        $customers = Customer::withTrashed()->with(['branch'])->paginate($this->paginate);
+        $customers = Customer::withTrashed()->with('industry')->paginate($this->paginate);
 
-        return view('admin.customers.index', compact('customers', $customers));
+        return view('admin.customers.index', compact('customers'));
     }
 
     public function getCustomer($id)
     {
-        $customer = Customer::withTrashed()->with(['branch'])->findOrFail($id);
+        $customer = Customer::withTrashed()->with('industry')->findOrFail($id);
 
-        return view('admin.customers.view', compact('customer', $customer));
+        return view('admin.customers.view', compact('customer'));
     }
 
 
     public function activate($id)
     {
         $customer = Customer::withTrashed()->findOrFail($id);
+
+        $associate = Customer::where('email',$customer->email)->first();
+
+        $bool = true;
+        while($bool)
+        {
+            $password = $this->passwordGenerator();
+            if(!Hash::check($password, $associate->password))
+                $bool = false;
+        }
 
         $password = $this->passwordGenerator();
         try {

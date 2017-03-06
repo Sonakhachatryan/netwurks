@@ -12,7 +12,7 @@
 */
 
 Route::get('test', function () {
-//    dd(bcrypt('admin'));
+    dd(bcrypt('user'));
 
     Mail::send('emails.send', ['title' => 'test', 'content' => 'dhfgrb'], function ($message) {
         $message->from('petersonben45@gmail.com', 'fgfdgfh');
@@ -34,13 +34,10 @@ Route::get('associate-feedback', function () {
     return view('associate_feedback');
 });
 
-Route::get('netwurxs-associates', function () {
-    return view('netwurxs_associates');
-});
 Route::get('/home', 'HomeController@index');
 
 Route::post('login', 'Auth\LoginController@login');
-Route::get('logout', 'Auth\LoginController@logout');
+Route::get('logout/{user}', 'Auth\LoginController@logout');
 Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
@@ -55,6 +52,19 @@ Route::post('associates/register', 'NetwurxsAssociates\AuthController@register')
 
 Route::get('customer-submission', 'Customers\AuthController@getRegView');
 Route::post('customer/register', 'Customers\AuthController@register');
+
+
+
+Route::group(['prefix' => 'customer', 'namespace' => 'Customers', 'middleware'=> 'authenticate:customer'],function (){
+    Route::get('dashboard','DashboardController@index');
+});
+
+
+Route::group(['prefix' => 'associate', 'namespace' => 'NetwurxsAssociates', 'middleware'=> 'authenticate:associate'],function (){
+    Route::get('dashboard','DashboardController@index');
+});
+
+
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
 
@@ -83,6 +93,10 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         Route::get('associates/{id}', 'AssociateController@getAssociate');
         Route::get('associates/activate/{id}', 'AssociateController@activate');
         Route::get('associates/reject/{id}', 'AssociateController@reject');
+        
+        Route::get('industries','IndustryController@index');
+        Route::get('industries/create','IndustryController@create');
+        Route::get('industries/store','IndustryController@store');
 
     });
 

@@ -1,21 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\NetwurxsAssociates;
 
 use Illuminate\Http\Request;
 use App\Http\Middleware\UserMiddleware;
+use App\Http\Controllers\Controller;
 
-class HomeController extends Controller
+class DashboardController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('authenticate:user');
-    }
 
     /**
      * Show the application dashboard.

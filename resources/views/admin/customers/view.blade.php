@@ -27,12 +27,12 @@
                 <td> {{ $customer->phone }} </td>
             </tr>
             <tr>
-                <th> Role</th>
-                <td> {{ $customer->role->name }} </td>
+                <th> Industry </th>
+                <td> {{ $customer->industry->name }} </td>
             </tr>
             <tr>
-                <th> Branch</th>
-                <td> {{ $customer->branch->name }} </td>
+                <th> Expertise area</th>
+                <td> {{ $customer->expertise_area }} </td>
             </tr>
             <tr>
                 <th> Status</th>
@@ -52,11 +52,11 @@
         </table>
     </div>
 
-    <h1>Textarea1</h1>
-    <p>{{ $customer->textarea1 }}</p>
+    <h1>Objective</h1>
+    <p>{{ $customer->objective }}</p>
 
-    <h1>Textarea2</h1>
-    <p>{{ $customer->textarea2 }}</p>
+    <h1>Outline of topic</h1>
+    <p>{{ $customer->outline_of_topic }}</p>
 
 @stop
 

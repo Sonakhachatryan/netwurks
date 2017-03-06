@@ -29,6 +29,9 @@
             <li>
                 <a href="{{ url('/admin/associates') }}"><i class="fa fa-diamond"></i> <span class="nav-label">Associates</span></a>
             </li>
+            <li>
+                <a href="{{ url('/admin/industries') }}"><i class="fa fa-diamond"></i> <span class="nav-label">Industries</span></a>
+            </li>
 
         </ul>
 

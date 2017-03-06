@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 use App\Models\Customer;
-use App\Models\Industries;
+use App\Models\Industry;
 class AuthController extends Controller
 {
     /*
@@ -27,15 +27,15 @@ class AuthController extends Controller
    
     public function getRegView()
     {
-        $industries = Industries::all();
-        dd($industries);
+        $industries = Industry::all();
+        
         return view('customer_submission',compact('industries'));
     }
     
     public function register(Request $request)
     {
         $this->validate($request,[
-            'organization' => 'required',
+            'name' => 'required',
             'email' => 'required|email|unique:customers',
             'expertise_area' => 'required',
             'area_input'=>'required_if:expertise_area,other',

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Customer;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Associate;
@@ -30,7 +31,16 @@ class AssociateController extends Controller
     {
         $associate = Associate::withTrashed()->findOrFail($id);
 
-        $password = $this->passwordGenerator();
+        $customer = Customer::where('email',$associate->email)->first();
+        
+        $bool = true;
+        while($bool)
+        {
+            $password = $this->passwordGenerator();
+            if(!Hash::check($password, $customer->password))
+                $bool = false;
+        }
+        
         try {
             Mail::send('emails.activation', ['title' => 'Activation', 'password' => $password, 'email' => $associate->email], function ($message) {
                 $message->from('petersonben45@gmail.com', 'Netwurxs');
@@ -57,6 +67,7 @@ class AssociateController extends Controller
         for ($i = 0; $i < 10; $i++) {
             $randomString .= $characters[rand(0, $charactersLength - 1)];
         }
+        
         return $randomString;
     }
 
