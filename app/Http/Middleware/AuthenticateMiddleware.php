@@ -17,11 +17,14 @@ class AuthenticateMiddleware
     public function handle($request, Closure $next,$guard)
     {
         if (!Auth::guard($guard)->check()) {
-            if ($guard == 'customer' || $guard == 'associate' )
+            if ( $guard == 'associate' )
                 return redirect('/');
 
             if ($guard == 'admin')
                 return redirect('/admin/login');
+            
+            if ($guard == 'customer')
+                return redirect('/customers/login');
         }
         
         return $next($request);

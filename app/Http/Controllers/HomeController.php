@@ -2,20 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ContactDetails;
 use Illuminate\Http\Request;
 use App\Http\Middleware\UserMiddleware;
 
+use Mail;
+
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('authenticate:user');
-    }
 
     /**
      * Show the application dashboard.
@@ -24,6 +18,31 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('associate.dashboard');
+        $details = ContactDetails::first();
+
+        return view('index',compact('details'));
+    }
+    
+    public function contact(Request $request)
+    {
+        $this->validate($request,[
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'message' => 'required',
+        ]);
+
+        $to = ContactDetails::first()->email;
+        $from = $request->email;
+        $name = $request->name;
+        $phone = $request->phone;
+        $message1 = $request->message;
+
+        Mail::send('emails.contact', ['phone' => $phone, 'message1' => $message1], function ($message) use($to,$from,$name) {
+            $message->from('petersonben45@gmail.com', $name);
+            $message->to($to);
+        });
+
+        return response()->json(['success' => 1]);
     }
 }

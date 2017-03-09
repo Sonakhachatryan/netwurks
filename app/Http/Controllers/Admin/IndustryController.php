@@ -6,10 +6,13 @@ use App\Models\Industry;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
+use App\Traits\Common;
+use App\Traits\Universal;
 
 class IndustryController extends Controller
 {
-    protected $paginate = 15;
+    use Universal;
+    protected $paginate = 10;
     /**
      * Show the application dashboard.
      *
@@ -33,10 +36,26 @@ class IndustryController extends Controller
             'name' => 'required',
         ]);
 
-        Industry::create(['name',$request->name]);
+        Industry::create(['name' => $request->name]);
         
         Session::flash('success','Industry created success.');
         
-        return back();
+        return redirect('admin/industries');
+    }
+
+    public function remove($id,$current_page)
+    {
+
+        Industry::destroy($id);
+
+        Session::flash('success', 'Industry deleted!');
+
+        $rdrURL = 'admin/industries';
+        if(isset($current_page)) {
+            $rdrURL .= '?page=' . $this->getCurrentPage($current_page,'App\Models\Industry');
+        }
+        return redirect($rdrURL);
+
+        
     }
 }

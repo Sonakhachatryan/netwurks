@@ -3,7 +3,8 @@
 @section('content')
     <div class="ibox float-e-margins">
         <div class="ibox-title pb">
-            <h5>Industries <a href="{{ url('admin/industries/create') }}"><span class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i></span></a></h5>
+            <h5>Industries <a href="{{ url('admin/industries/create') }}"><span class="btn btn-success"><i
+                                class="fa fa-plus" aria-hidden="true"></i></span></a></h5>
             <div class="ibox-tools">
                 <a class="collapse-link">
                     <i class="fa fa-chevron-up"></i>
@@ -23,13 +24,15 @@
                     @foreach($industries as $industry)
                         <tr class="gradeX">
                             <td>{{ $industry->name }}</td>
-                            <td class="w100">
-                                    <a href="{{ url('admin/industries/update/' . $industry->id) }}" title="activate">
-                                        <span class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></span>
-                                    </a>
-                                    <a href="{{ url('admin/industries/delete/' . $industry->id) }}" title="activate">
-                                        <span class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-                                    </a>
+                            <td class="w100 actions">
+                                <a href="{{ url('admin/industries/update/' . $industry->id) }}" title="activate">
+                                    <span class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                                </a>
+                                    <span id="{{ $industry->id }}" title="activate">
+                                        <a href="{{ url('admin/industries/delete/' . $industry->id . '/' . $industries->currentPage()) }}"></a>
+                                        <span class="btn btn-danger"><i class="fa fa-trash-o"
+                                                                        aria-hidden="true"></i></span>
+                                    </span>
                             </td>
                         </tr>
                     @endforeach
@@ -48,4 +51,8 @@
             @endif
         </div>
     </div>
+@stop
+
+@section('script')
+    <script src="{{ url('js/confirmDelete.js') }}"></script>
 @stop

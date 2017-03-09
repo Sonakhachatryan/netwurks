@@ -2,5 +2,5 @@
 
 @section('content')
     {{ $associate }}
-    <a href="{{ url('logout/associate') }}">Log Out</a>
+    <div><a href="{{ url('associates/logout') }}">Log Out</a></div>
 @stop

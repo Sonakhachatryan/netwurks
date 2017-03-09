@@ -24,12 +24,16 @@ class AuthController extends Controller
 
     use AuthenticatesUsers;
 
+    public function __construct()
+    {
+        $this->middleware('guest:customer');
+    }
    
     public function getRegView()
     {
         $industries = Industry::all();
         
-        return view('customer_submission',compact('industries'));
+        return view('customer/auth/register',compact('industries'));
     }
     
     public function register(Request $request)
@@ -61,17 +65,15 @@ class AuthController extends Controller
 
         $file_name = rand(10,99) . time() . '.' .$file->getClientOriginalExtension();
         
-        $destinationPath = 'uploads/customers';
-        $file->move($destinationPath,$file->getClientOriginalName());
+        $destinationPath = 'uploads/customers/';
+       $file->move($destinationPath,$file_name);
+           $data['desc_file'] = $file_name;
+           $data['deleted_at'] = Carbon::now();
 
-        $data['desc_file'] = $file_name;
-        $data['deleted_at'] = Carbon::now();
-        
+           Customer::create($data);
 
-
-        Customer::create($data);
-        
-        return view('layouts.message');
+           return view('layouts.message');
+       
         
     }
 }

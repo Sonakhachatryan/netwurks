@@ -1,0 +1,29 @@
+
+.error{
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+.name_err{
+    position: absolute;
+    left: 22px;
+    top: 80px;
+}
+
+.email_err{
+    position: absolute;
+    top: 80px;
+    left: 300px;
+}
+
+.phone_err{
+    position: absolute;
+    left: 22px;
+    top: 138px;;
+}
+
+.message_err{
+    position: absolute;
+    left: 22px;
+    top: 382px;
+}

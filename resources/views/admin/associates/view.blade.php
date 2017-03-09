@@ -13,6 +13,7 @@
     </h1>
     <img class="show-user-image" alt="user-image" src = "{{ url('images/associates/' . $associate->avatar) }}">
     <div class="table-responsive">
+        @include('layouts.messages')
         <table class="table table-bordered table-striped table-hover">
             <tbody>
             <tr>

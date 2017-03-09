@@ -22,12 +22,12 @@ class CreateCustomersTable extends Migration
             $table->string('expertise_area');
             $table->text('objective');
             $table->text('outline_of_topic');
-            $table->integer('industry_id')->unsigned();
+            $table->integer('industry_id')->unsigned()->nullable();;
             $table->foreign('industry_id')
                 ->references('id')
                 ->on('industries')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
+                ->onDelete('set null')
+                ->onUpdate('set null');
             $table->string('desc_file');
             $table->softDeletes();
             $table->rememberToken();

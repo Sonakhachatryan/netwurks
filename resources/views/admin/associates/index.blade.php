@@ -11,6 +11,7 @@
             </div>
         </div>
         <div class="ibox-content">
+            @include('layouts.messages')
             @if(count($associates) > 0)
                 <table class="table table-striped table-bordered table-hover " id="editable">
                     <thead>
@@ -39,7 +40,7 @@
                                     Active
                                 @endif
                             </td>
-                            <td>
+                            <td class="actions">
                                 <a href="{{ url('admin/associates/' . $associate->id) }}" title="show">
                                     <span class="btn btn-success"><i class="fa fa-eye" aria-hidden="true"></i></span>
                                 </a>
@@ -48,10 +49,12 @@
                                         <span class="btn btn-primary"><i class="fa fa-check"
                                                                          aria-hidden="true"></i></span>
                                     </a>
-                                    <a href="{{ url('admin/associates/reject/' . $associate->id) }}" title="activate">
-                                        <span class="btn btn-danger"><i class="fa fa-trash-o"
-                                                                        aria-hidden="true"></i></span>
-                                    </a>
+                                    <span>
+                                       <a href="{{ url('admin/associate/reject/' . $associate->id . '/' . $associates->currentPage()) }}"
+                                          title="activate"></a>
+                                       <span class="btn btn-danger"><i class="fa fa-trash-o"
+                                                                       aria-hidden="true"></i></span>
+                                    </span>
                                 @endif
                             </td>
                         </tr>
@@ -76,4 +79,8 @@
             @endif
         </div>
     </div>
+@stop
+
+@section('script')
+    <script src="{{ url('js/confirmDelete.js') }}"></script>
 @stop

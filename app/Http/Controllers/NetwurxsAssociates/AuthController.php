@@ -24,10 +24,14 @@ class AuthController extends Controller
 
     use AuthenticatesUsers;
 
+    public function __construct()
+    {
+        $this->middleware('guest:associate');
+    }
 
     public function getRegView()
     {
-        return view('netwurxs_associates');
+        return view('associate/auth/register');
     }
 
     public function register(Request $request)
@@ -56,7 +60,7 @@ class AuthController extends Controller
         $file_name = rand(10,99) . time() . '.' .$file->getClientOriginalExtension();
 
         $destinationPath = 'uploads/associates';
-        $file->move($destinationPath,$file->getClientOriginalName());
+        $file->move($destinationPath,$file_name);
 
         $data['resume'] = $file_name;
         $data['deleted_at'] = Carbon::now();

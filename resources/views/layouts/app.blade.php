@@ -57,10 +57,10 @@
             </li>
             <li>
                 <div>
-                    @if(!auth()->guard($guard)->check())
+                    @if(!auth()->guard('associate')->check())
                         <a class="login-popup" href="#">Login</a>
                     @else
-                        <a href="{{ url('/' . $guard . '/dashboard') }}">{{  $$guard->name }}  </a>
+                        <a href="{{ url('/associate/dashboard') }}">{{  $associate->name }}  </a>
                     @endif
                 </div>
             </li>
@@ -131,7 +131,7 @@
     <div class="clear-both"></div>
     <div class="login-inner-list">
         <h3>Login to your account</h3>
-        <form action="{{ url('login') }}" method="post">
+        <form action="{{ url('associates/login') }}" method="post">
             {{ csrf_field() }}
             <div class="username">
                 <input type="email" placeholder="Email" name="email">

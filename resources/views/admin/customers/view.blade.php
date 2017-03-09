@@ -12,6 +12,7 @@
         @endif
     </h1>
     <div class="table-responsive">
+        @include('layouts.messages')
         <table class="table table-bordered table-striped table-hover">
             <tbody>
             <tr>
@@ -46,7 +47,7 @@
             </tr>
             <tr>
                 <th> Description file</th>
-                <td><a href="{{ url('customers/download/' . $customer->id) }}">{{ $customer->desc_file }}</a></td>
+                <td><a href="{{ url('/admin/customers/download/' . $customer->id) }}">{{ $customer->desc_file }}</a></td>
             </tr>
             </tbody>
         </table>

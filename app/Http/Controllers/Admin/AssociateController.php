@@ -6,11 +6,13 @@ use App\Models\Customer;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Associate;
-use Mail;
+use App\Traits\Common;
+use App\Traits\Universal;
 
 class AssociateController extends Controller
 {
-    protected $paginate = 15;
+    protected $paginate = 2;
+    use Common,Universal;
 
     public function index()
     {
@@ -29,65 +31,33 @@ class AssociateController extends Controller
 
     public function activate($id)
     {
-        $associate = Associate::withTrashed()->findOrFail($id);
 
-        $customer = Customer::where('email',$associate->email)->first();
-        
-        $bool = true;
-        while($bool)
-        {
-            $password = $this->passwordGenerator();
-            if(!Hash::check($password, $customer->password))
-                $bool = false;
-        }
-        
-        try {
-            Mail::send('emails.activation', ['title' => 'Activation', 'password' => $password, 'email' => $associate->email], function ($message) {
-                $message->from('petersonben45@gmail.com', 'Netwurxs');
-
-                $message->to('petersonben45@gmail.com');
-
-            });
-
-            $associate->update(['password' => bcrypt($password), 'deleted_at' => NULL]);
-
+        $activate = $this->activateUser($id,'App\Models\Associate');
+        if($activate)
             return back()->with('success', 'Associate successfully activated.');
-        } catch (\Exception $e) {
-            return back()->with('error', 'Something went wrong.');
-        }
-
+        return back()->with('error', 'Something went wrong.');
 
     }
-
-    function passwordGenerator()
+    
+    public function reject($id,$current_page)
     {
-        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $charactersLength = strlen($characters);
-        $randomString = '';
-        for ($i = 0; $i < 10; $i++) {
-            $randomString .= $characters[rand(0, $charactersLength - 1)];
-        }
-        
-        return $randomString;
+        $reject = $this->rejectUser($id,$current_page,'App\Models\Associate');
+        if($reject)
+            return redirect($reject);
+        return back()->with('error', 'Something went wrong.');
     }
 
-    public function reject($id)
+
+    public function download($id)
     {
-        $customer = Customer::withTrashed()->findOrFail($id);
+        $associate = Associate::withTrashed()->find($id);
+        $file = $associate->resume;
+        $arr = explode('.',$file);
 
-        try {
-            $mail = Mail::send('emails.reject', [], function ($message) {
-                $message->from('petersonben45@gmail.com', 'Netwurxs');
+        $headers = array(
+            'Content-Type: application/' . $arr[1],
+        );
 
-                $message->to('petersonben45@gmail.com');
-
-            });
-            $customer->forceDelete();
-            return back()->with('success', 'Customer successfully deleted.');
-        } catch (\Exception $e) {
-            return back()->with('error', 'Something went wrong.');
-        }
-
-
+        return response()->download(public_path().'/uploads/associates/'.$file, $associate->name. '.' .$arr[1], $headers);
     }
 }

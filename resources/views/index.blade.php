@@ -128,7 +128,7 @@
                                 </div>
                                 <p>
                                     We are going to be different from your usual
-                                    consultant company!  We are going to do
+                                    consultant company! We are going to do
                                     things you can't do for yourself
                                     and develop new strategies.
                                 </p>
@@ -142,13 +142,13 @@
                     <div class="content-links-middle-block-inner">
                         <a href="#">
                             <fieldset>
-                                <legend>What  Are We Building?</legend>
+                                <legend>What Are We Building?</legend>
                                 <div class="links-icon1-list text-center">
                                     <img src="img/links-icon2.png" alt="links-icon1">
                                 </div>
                                 <p>
                                     We are going to be different from your usual
-                                    consultant company!  We are going to do
+                                    consultant company! We are going to do
                                     things you can't do for yourself
                                     and develop new strategies.
                                 </p>
@@ -168,7 +168,7 @@
                                 </div>
                                 <p>
                                     We are going to be different from your usual
-                                    consultant company!  We are going to do
+                                    consultant company! We are going to do
                                     things you can't do for yourself
                                     and develop new strategies.
                                 </p>
@@ -234,20 +234,24 @@
                                 <div class="col-sm-6">
                                     <div class="left-block">
                                         <div class="left-block-top">
-                                            <input type="text" placeholder="The type of work being done:" title="The type of work being done:">
+                                            <input type="text" placeholder="The type of work being done:"
+                                                   title="The type of work being done:">
                                         </div>
                                         <div class="left-block-bottom">
-                                            <input type="text" placeholder="The type of work being done:" title="The type of work being done:">
+                                            <input type="text" placeholder="The type of work being done:"
+                                                   title="The type of work being done:">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="right-block">
                                         <div class="right-block-top">
-                                            <input type="text" placeholder="Describe the management structure։" title="Describe the management structure։">
+                                            <input type="text" placeholder="Describe the management structure։"
+                                                   title="Describe the management structure։">
                                         </div>
                                         <div class="right-block-bottom">
-                                            <input type="text" placeholder="Describe environment for employers:" title="Describe environment for employers:">
+                                            <input type="text" placeholder="Describe environment for employers:"
+                                                   title="Describe environment for employers:">
                                         </div>
                                     </div>
                                 </div>
@@ -332,33 +336,47 @@
                     <div class="col-sm-6">
                         <div class="contact-left">
                             <h2>Contact Us</h2>
-                            <p>Free phone: 800-2345-6789</p>
-                            <p>Address: 4578 Marmora Road,Glasgow D04 89GR</p>
-                            <p>Hours: 6am-4pm PST M-Th; 6am-3pm PST Fri</p>
-                            <p>E-mail: netwurxs.com</p>
+                            <p>Free phone: {{ $details != NULL ? $details->phone :'' }}</p>
+                            <p>Address: {{ $details != NULL ? $details->address :'' }}</p>
+                            <p>Hours: {{ $details != NULL ? $details->hours :'' }}</p>
+                            <p>E-mail: {{ $details != NULL ? $details->email :'' }}</p>
                             <div class="social">
                                 <ul class="clear-fix">
-                                    <li><a href="#" class="fb sprite"></a></li>
-                                    <li><a href="#" class="in sprite"></a></li>
-                                    <li><a href="#" class="google sprite"></a></li>
-                                    <li><a href="#" class="twitter sprite"></a></li>
-                                    <li><a href="#" class="skype sprite"></a></li>
+                                    <li>
+                                        <a href="{{ ($details != NULL && $details->facebook !=NULL) ? $details->facebook :'#' }}"
+                                           class="fb sprite"></a></li>
+                                    <li>
+                                        <a href="{{ ($details != NULL && $details->linkedin !=NULL) ? $details->linkedin :'#' }}"
+                                           class="in sprite"></a></li>
+                                    <li>
+                                        <a href="{{ ($details != NULL && $details->google !=NULL) ? $details->google :'#' }}"
+                                           class="google sprite"></a></li>
+                                    <li>
+                                        <a href="{{ ($details != NULL && $details->twitter !=NULL) ? $details->twitter :'#' }}"
+                                           class="twitter sprite"></a></li>
+                                    <li>
+                                        <a href="{{ ($details != NULL && $details->skype !=NULL) ? $details->skype :'#' }}"
+                                           class="skype sprite"></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="contact-right">
-                            <form name="">
+                            <form id="contact">
                                 <div class="name-email-block">
-                                    <input type="text" placeholder="Name:">
-                                    <input type="email" placeholder="E-mail:">
+                                    <input type="text" placeholder="Name:" name="name">
+                                    <small class="error name_err"></small>
+                                    <input type="email" placeholder="E-mail:" name="email">
+                                    <small class="error email_err"></small>
                                 </div>
                                 <div class="phone">
-                                    <input type="text" placeholder="Phone:">
+                                    <input type="text" placeholder="Phone:" name="phone">
+                                    <small class="error phone_err"></small>
                                 </div>
-                                <textarea name="" id="" placeholder="Message:"></textarea>
-                                <button>Send</button>
+                                <textarea name="message" id="" placeholder="Message:"></textarea>
+                                <small class="error message_err"></small>
+                                <button id="contact_botton" type="button">Send</button>
                             </form>
                         </div>
                     </div>
@@ -371,3 +389,64 @@
 @section('footer')
     @include('layouts.partials.footer')
 @stop
+
+@section('script')
+    <script>
+        $('#contact_botton').on('click', function () {
+            var name = $('#contact input[name="name"]').val();
+            var email = $('#contact input[name="email"]').val();
+            var phone = $('#contact input[name="phone"]').val();
+            var message = $('#contact textarea[name="message"]').val();
+
+            $.ajax({
+                method: "post",
+                data: {
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    message: message,
+                },
+                url: "contact",
+                success: function (result) {
+                    $('.email_err').text('');
+                    $('.name_err').text('');
+                    $('.message_err').text('');
+                    $('.phone_err').text('');
+                },
+                error: function(response){
+                    var obj = $.parseJSON(response.responseText)
+
+                    if(obj.hasOwnProperty('email')){
+                        $('.email_err').text(obj.email[0]);
+                    }else{
+                        $('.email_err').text('');
+                    }
+
+                    if(obj.hasOwnProperty('name')){
+                        $('.name_err').text(obj.name[0]);
+                    }else{
+                        $('.name_err').text('');
+                    }
+
+                    if(obj.hasOwnProperty('message')){
+                        $('.message_err').text(obj.message[0]);
+                    }else{
+                        $('.message_err').text('');
+                    }
+
+                    if(obj.hasOwnProperty('phone')){
+                        $('.phone_err').text(obj.phone[0]);
+                    }else{
+                        $('.phone_err').text('');
+                    }
+
+                }
+            });
+
+        });
+    </script>
+@endsection
+
+@section('style')
+    <link rel="stylesheet" href="{{ url('css/custom.css') }}">
+    @stop

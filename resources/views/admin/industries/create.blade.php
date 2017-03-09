@@ -1,12 +1,10 @@
 @extends('admin.layouts.index')
 
 @section('content')
+    @include('layouts.messages')
     <div class="ibox-content">
         <form method="post" action="{{ url('admin/industries/store') }}" class="form-horizontal">
-            <div class="form-group"><label class="col-sm-2 control-label">Name</label>
-                <div class="col-sm-10"><input type="text" class="form-control" name="name"></div>
-            </div>
-            <div class="hr-line-dashed"></div>
+            {{ csrf_field() }}
             <div class="form-group"><label class="col-sm-2 control-label">Name</label>
                 <div class="col-sm-10"><input type="text" class="form-control" name="name"></div>
             </div>

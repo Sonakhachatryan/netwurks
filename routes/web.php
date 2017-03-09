@@ -23,9 +23,7 @@ Route::get('test', function () {
 
 });
 
-Route::get('/', function () {
-    return view('index');
-});
+
 
 //Route::get('customer-submission', function () {
 //    return view('customer_submission');
@@ -35,6 +33,8 @@ Route::get('associate-feedback', function () {
 });
 
 Route::get('/home', 'HomeController@index');
+Route::get('/', 'HomeController@index');
+Route::post('contact','HomeController@contact');
 
 Route::post('login', 'Auth\LoginController@login');
 Route::get('logout/{user}', 'Auth\LoginController@logout');
@@ -45,23 +45,30 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 Route::get('register', 'Auth\RegisterController@showRegistrationForm');
 Route::post('register', 'Auth\RegisterController@register');
 
-
+//associate authentication
+Route::post('associates/login', 'NetwurxsAssociates\LoginController@login');
 Route::get('netwurxs-associates', 'NetwurxsAssociates\AuthController@getRegView');
+Route::get('associates/logout', 'NetwurxsAssociates\LoginController@logout');
 Route::post('associates/register', 'NetwurxsAssociates\AuthController@register');
 
-
+//customer authentication
+Route::get('customers/login', 'Customers\LoginController@showLoginForm');
+Route::post('customers/login', 'Customers\LoginController@login');
 Route::get('customer-submission', 'Customers\AuthController@getRegView');
 Route::post('customer/register', 'Customers\AuthController@register');
+Route::get('customers/logout', 'Customers\LoginController@logout');
 
 
 
 Route::group(['prefix' => 'customer', 'namespace' => 'Customers', 'middleware'=> 'authenticate:customer'],function (){
     Route::get('dashboard','DashboardController@index');
+    Route::get('/','DashboardController@index');
 });
 
 
 Route::group(['prefix' => 'associate', 'namespace' => 'NetwurxsAssociates', 'middleware'=> 'authenticate:associate'],function (){
     Route::get('dashboard','DashboardController@index');
+    Route::get('/','DashboardController@index');
 });
 
 
@@ -86,17 +93,25 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         Route::get('customers', 'CustomerController@index');
         Route::get('customers/{id}', 'CustomerController@getCustomer');
         Route::get('customers/activate/{id}', 'CustomerController@activate');
-        Route::get('customers/reject/{id}', 'CustomerController@reject');
+        Route::get('customers/reject/{id}/{current_page}', 'CustomerController@reject');
+        Route::get('customers/download/{id}', 'CustomerController@download');
 
 
         Route::get('associates', 'AssociateController@index');
         Route::get('associates/{id}', 'AssociateController@getAssociate');
         Route::get('associates/activate/{id}', 'AssociateController@activate');
-        Route::get('associates/reject/{id}', 'AssociateController@reject');
-        
+        Route::get('associates/reject/{id}/{current_page}', 'AssociateController@reject');
+        Route::get('associates/download/{id}', 'AssociateController@download');
+
         Route::get('industries','IndustryController@index');
         Route::get('industries/create','IndustryController@create');
-        Route::get('industries/store','IndustryController@store');
+        Route::post('industries/store','IndustryController@store');
+        Route::get('industries/delete/{id}/{current_page}','IndustryController@remove');
+        
+        
+        
+        Route::get('contact-details','ContactDetailsController@index');
+        Route::post('contact-details/update/{field}','ContactDetailsController@update');
 
     });
 

@@ -10,21 +10,25 @@ class RedirectIfAuthenticated
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
-     * @param  string|null  $guard
+     * @param  \Illuminate\Http\Request $request
+     * @param  \Closure $next
+     * @param  string|null $guard
      * @return mixed
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if($guard == 'admin' && Auth::guard($guard)->check()){
-            return redirect('/admin');
+        if (Auth::guard($guard)->check()) {
+            
+            if ($guard == 'admin')
+                return redirect('/admin');
+            
+            if ($guard == 'customer')
+                return redirect('/customer');
+            
+            if ($guard == 'associate')
+                return redirect('/associate');
         }
-        if ($guard == 'user') {
-          if(Auth::guard('customer')->check() && Auth::guard('associate')->check())
-                return redirect('/');
-        }
-
+        
         return $next($request);
     }
 }
